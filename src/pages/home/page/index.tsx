@@ -25,7 +25,6 @@ export const HomePage = () => {
   return (
     <Box
       backgroundImage={`Video.gif`} // Replace with your image path
-      opacity={0.9}
       backgroundSize="cover"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
@@ -35,7 +34,12 @@ export const HomePage = () => {
       margin={"auto"}
     >
       <VStack spacing={3} width="full" height="full" justifyContent={"center"}>
-        <Image src={"/7Logo.png"} alt={"Logo"} boxSize={boxSize} />
+        <Image
+          src={"/7Logo.png"}
+          alt={"Logo"}
+          boxSize={boxSize}
+          opacity={0.9}
+        />
         <Heading
           as="h2"
           size={headingSize}
