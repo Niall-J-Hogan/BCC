@@ -8,9 +8,9 @@ import {
 } from "@chakra-ui/react";
 export const HomePage = () => {
   const boxSize = useBreakpointValue({
-    base: "200px", // Mobile devices
+    base: "300px", // Mobile devices
     sm: "500px", // Small screens
-    md: "200px", // Medium screens
+    md: "600px", // Medium screens
     lg: "700px", // Large screens and up
   });
 
