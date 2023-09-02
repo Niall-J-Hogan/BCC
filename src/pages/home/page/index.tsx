@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 export const HomePage = () => {
   const boxSize = useBreakpointValue({
-    base: "300px", // Mobile devices
+    base: "xxs", // Mobile devices
     sm: "500px", // Small screens
     md: "600px", // Medium screens
     lg: "700px", // Large screens and up
@@ -29,53 +29,45 @@ export const HomePage = () => {
       backgroundSize="cover"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
-      p={4} // Adjust padding as needed
+      p={10} // Adjust padding as needed
       h="100vh"
       w="100vw"
+      margin={"auto"}
     >
-      <Box
-        position="absolute"
-        top="50%"
-        left="50%"
-        transform="translate(-50%, -50%)"
-      >
-        <VStack margin={"auto"} spacing={10}>
-          <Image src={"/7Logo.png"} alt={"Logo"} boxSize={boxSize} />
-          <VStack spacing={3} textAlign="center" width="full">
-            <Heading
-              as="h2"
-              size={headingSize}
-              color="#CDAF00"
-              zIndex={99}
-              backgroundColor={"#4900CD"}
-              flexWrap={"nowrap"}
-              dropShadow={"100px"}
-              padding={"5px"}
-            >
-              Sheffield
-            </Heading>
-            <Text
-              fontSize={headingSize}
-              padding={"5px"}
-              color="white"
-              backgroundColor={"#4900CD"}
-            >
-              31/08/2024 - 01/09/2024
-            </Text>
-            <Heading
-              as="h2"
-              size={headingSize}
-              color="#CDAF00"
-              zIndex={99}
-              flexWrap={"nowrap"}
-              padding={"5px"}
-              backgroundColor={"#4900CD"}
-            >
-              Kelham Island Museum
-            </Heading>
-          </VStack>
-        </VStack>
-      </Box>
+      <VStack spacing={3} width="full" height="full" justifyContent={"center"}>
+        <Image src={"/7Logo.png"} alt={"Logo"} boxSize={boxSize} />
+        <Heading
+          as="h2"
+          size={headingSize}
+          color="#CDAF00"
+          zIndex={99}
+          backgroundColor={"#4900CD"}
+          flexWrap={"nowrap"}
+          dropShadow={"100px"}
+          padding={"5px"}
+        >
+          Sheffield
+        </Heading>
+        <Text
+          fontSize={headingSize}
+          padding={"5px"}
+          color="white"
+          backgroundColor={"#4900CD"}
+        >
+          31/08/2024 - 01/09/2024
+        </Text>
+        <Heading
+          as="h2"
+          size={headingSize}
+          color="#CDAF00"
+          zIndex={99}
+          flexWrap={"nowrap"}
+          padding={"5px"}
+          backgroundColor={"#4900CD"}
+        >
+          Kelham Island Museum
+        </Heading>
+      </VStack>
     </Box>
     // <Box
     //   position="relative"
