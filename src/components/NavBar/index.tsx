@@ -22,7 +22,15 @@ export const NavBar = () => {
   const btnRef = React.useRef(null);
 
   return (
-    <Box as="nav" bg="#5B19D2" p={4} color="white" position="fixed" w="100%">
+    <Box
+      as="nav"
+      bg="#5B19D2"
+      p={4}
+      color="white"
+      position="fixed"
+      w="100%"
+      zIndex={1000}
+    >
       <Flex maxW="1200px" mx="auto" alignItems="center" position="relative">
         <NavBarLogo />
         <Spacer />

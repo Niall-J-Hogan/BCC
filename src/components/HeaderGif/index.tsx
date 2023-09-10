@@ -51,7 +51,12 @@ export const HeaderGif = () => {
           >
             {title}
           </Heading>
-          <Button size={buttonSize} backgroundColor={"#CDAF00"} color="white">
+          <Button
+            size={buttonSize}
+            backgroundColor={"#CDAF00"}
+            color="white"
+            zIndex={1}
+          >
             Click For Tickets
           </Button>
         </VStack>
