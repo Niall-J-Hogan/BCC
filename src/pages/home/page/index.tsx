@@ -21,10 +21,9 @@ export const HomePage = () => {
     lg: "2xl", // Large screens and up
   });
 
-  //backgroundColor="hsla(238, 100%, 80%, 1)"
   return (
     <Box
-      backgroundImage={`Video.gif`} // Replace with your image path
+      backgroundImage={`Video.gif`}
       backgroundSize="cover"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
