@@ -1,7 +1,9 @@
 import {
   Box,
   Button,
+  HStack,
   Heading,
+  Text,
   VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -22,6 +24,15 @@ export const LandingPage = () => {
       </VStack>
       <VStack marginTop={headerMargin} height="full">
         <HeaderGif />
+      </VStack>
+      <VStack
+        height="1200px"
+        backgroundColor={"#E4FDE1"}
+        justifyContent={"flex-start"}
+      >
+        <HStack marginTop={"50px"}>
+          <Text fontSize={"xl"}>Hellos</Text>
+        </HStack>
       </VStack>
     </>
   );
