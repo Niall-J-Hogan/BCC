@@ -23,8 +23,8 @@ export const NavBar = () => {
   return (
     <Box
       as="nav"
-      bg="#4900CD"
-      opacity={0.8}
+      bg="#5B19D2"
+      // opacity={0.9}
       p={4}
       color="white"
       position="fixed"
