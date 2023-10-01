@@ -3,13 +3,14 @@ import {
   Box,
   Button,
   Heading,
+  Text,
   VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
 
 export const HeaderGif = () => {
   const headingSize = useBreakpointValue({
-    base: "md", // Mobile devices
+    base: "sm", // Mobile devices
     md: "2xl", // Medium screens
   });
 
@@ -23,7 +24,7 @@ export const HeaderGif = () => {
     md: "60vh", // Large screens and up
   });
 
-  const title: string = "Sheffield's Premier Tattoo Convention";
+  const title: string = "A Tattoo Convention by Tattooers, for Sheffield!";
 
   return (
     <>
@@ -51,14 +52,25 @@ export const HeaderGif = () => {
           >
             {title}
           </Heading>
-          <Button
-            size={buttonSize}
-            backgroundColor={"#CDAF00"}
+          <Text
+            fontSize={headingSize}
+            padding={"5px"}
             color="white"
-            zIndex={1}
+            backgroundColor={"#4900CD"}
           >
-            Click For Tickets
-          </Button>
+            31/08/2024 - 01/09/2024
+          </Text>
+          <Heading
+            as="h4"
+            size={headingSize}
+            color="#CDAF00"
+            zIndex={99}
+            flexWrap={"nowrap"}
+            padding={"5px"}
+            backgroundColor={"#4900CD"}
+          >
+            Kelham Island Museum
+          </Heading>
         </VStack>
       </Box>
     </>
