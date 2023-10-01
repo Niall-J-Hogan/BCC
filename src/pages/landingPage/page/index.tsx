@@ -1,15 +1,15 @@
 import {
-  Box,
-  Button,
   HStack,
-  Heading,
+  Image,
   Text,
   VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-import { NavBar } from "@/components/NavBar";
 import { HeaderGif } from "@/components/HeaderGif";
+import { NavBar } from "@/components/NavBar";
+import { SponsorLogoContainer } from "@/components/SponsorLogoContainer";
+import { Footer } from "@/components/Footer";
 
 export const LandingPage = () => {
   const headerMargin = useBreakpointValue({
@@ -30,10 +30,10 @@ export const LandingPage = () => {
         backgroundColor={"#E4FDE1"}
         justifyContent={"flex-start"}
       >
-        <HStack marginTop={"50px"}>
-          <Text fontSize={"xl"}>Hellos</Text>
-        </HStack>
+        <SponsorLogoContainer />
       </VStack>
+
+      <Footer />
     </>
   );
 };
