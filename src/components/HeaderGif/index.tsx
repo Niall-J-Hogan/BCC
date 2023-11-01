@@ -8,7 +8,18 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-export const HeaderGif = () => {
+interface IHeaderGif {
+  title?: string;
+  subtitle?: string;
+  tagline?: any;
+  isButton?: boolean;
+}
+export const HeaderGif = ({
+  title,
+  subtitle,
+  tagline,
+  isButton = false,
+}: IHeaderGif) => {
   const headingSize = useBreakpointValue({
     base: "sm", // Mobile devices
     md: "2xl", // Medium screens
@@ -23,8 +34,6 @@ export const HeaderGif = () => {
     base: "50vh", // Mobile devices
     md: "60vh", // Large screens and up
   });
-
-  const title: string = "A Tattoo Convention by Tattooers, for Sheffield!";
 
   return (
     <>
@@ -43,34 +52,40 @@ export const HeaderGif = () => {
           justifyContent={"center"}
           margin={"auto"}
         >
-          <Heading
-            as="h2"
-            size={headingSize}
-            color="#FEFAE0"
-            backgroundColor={"#4900CD"}
-            padding={"5px"}
-          >
-            {title}
-          </Heading>
-          <Text
-            fontSize={headingSize}
-            padding={"5px"}
-            color="white"
-            backgroundColor={"#4900CD"}
-          >
-            31/08/2024 - 01/09/2024
-          </Text>
-          <Heading
-            as="h4"
-            size={headingSize}
-            color="#CDAF00"
-            zIndex={99}
-            flexWrap={"nowrap"}
-            padding={"5px"}
-            backgroundColor={"#4900CD"}
-          >
-            Kelham Island Museum
-          </Heading>
+          {title && (
+            <Heading
+              as="h2"
+              size={headingSize}
+              color="#FEFAE0"
+              backgroundColor={"#4900CD"}
+              padding={"5px"}
+            >
+              {title}
+            </Heading>
+          )}
+          {subtitle && (
+            <Text
+              fontSize={headingSize}
+              padding={"5px"}
+              color="white"
+              backgroundColor={"#4900CD"}
+            >
+              {subtitle}
+            </Text>
+          )}
+          {tagline && (
+            <Heading
+              as="h4"
+              size={headingSize}
+              color="#CDAF00"
+              zIndex={99}
+              flexWrap={"nowrap"}
+              padding={"5px"}
+              backgroundColor={!isButton ? "#4900CD" : ""}
+            >
+              {tagline}
+            </Heading>
+          )}
         </VStack>
       </Box>
     </>
