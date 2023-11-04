@@ -24,7 +24,7 @@ export const ArtistPage = () => {
           tagline={
             <Button
               size={"lg"}
-              width="200px"
+              width="300px"
               color={"white"}
               backgroundColor={"#CDAF00"}
             >
