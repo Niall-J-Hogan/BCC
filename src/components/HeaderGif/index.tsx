@@ -59,6 +59,7 @@ export const HeaderGif = ({
               color="#FEFAE0"
               backgroundColor={"#4900CD"}
               padding={"5px"}
+              fontStyle={"italic"}
             >
               {title}
             </Heading>
