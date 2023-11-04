@@ -25,19 +25,21 @@ export const HeaderGif = ({
     md: "2xl", // Medium screens
   });
 
-  const buttonSize = useBreakpointValue({
-    base: "md", // Mobile devices
-    md: "lg", // Large screens and up
-  });
-
   const gifSize = useBreakpointValue({
     base: "50vh", // Mobile devices
     md: "60vh", // Large screens and up
   });
+  const headerMargin = useBreakpointValue({
+    base: "65px", // Mobile devices
+    md: "60px", // Large screens and up
+  });
+  const gifMargin = useBreakpointValue({
+    base: "8px", // Mobile devices
+    md: "6px", // Large screens and up
+  });
 
   return (
-    <>
-      {" "}
+    <VStack marginTop={headerMargin} height="full" paddingTop={gifMargin}>
       <Box
         backgroundImage={`/Video.gif`}
         backgroundSize="cover"
@@ -89,6 +91,6 @@ export const HeaderGif = ({
           )}
         </VStack>
       </Box>
-    </>
+    </VStack>
   );
 };
