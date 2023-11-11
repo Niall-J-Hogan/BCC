@@ -6,11 +6,16 @@ export const SponsorLogoContainer = () => {
     md: "60vw", // Medium screens
   });
 
+  const headingSize = useBreakpointValue({
+    base: "md", // Mobile devices
+    md: "xl", // Medium screens
+  });
+
   return (
     <VStack width={"full"} marginBottom={"50px"}>
       <Heading
         as="h2"
-        size={"xl"}
+        size={headingSize}
         color="White "
         fontStyle={"italic"}
         backgroundColor={"#4900CD"}
@@ -25,7 +30,7 @@ export const SponsorLogoContainer = () => {
         justifyContent={"space-between"}
       >
         <SponsorLogoBox
-          title="Barbers"
+          title="Barber DTS"
           subtitle="Worldwide Tattoo Supplies"
           altText="Barber Tattoo Supplies"
           imageLink="/barberLogo.png"
@@ -33,7 +38,7 @@ export const SponsorLogoContainer = () => {
         />
         <SponsorLogoBox
           title="OG Supply"
-          subtitle="   Tattoo Machines and Supplies"
+          subtitle="Tattoo Machines and Supplies"
           altText="OG Tattoo Supply"
           imageLink="/ogLogo.png"
           websiteLink="https://www.ogtattoosupply.com/"
