@@ -26,14 +26,22 @@ export const ArticleComponent = ({
       >
         {title}
       </Heading>
-      <HStack marginTop="50px">
+      <HStack marginTop="50px" height="full">
         {orientation === "flex-start" && (
           <Image alt="" src={image} sizes="300px" />
         )}
+        <VStack height="full">
+          <Text
+            as="article"
+            paddingX="40px"
+            lineHeight={"9"}
+            fontWeight={"semibold"}
+            whiteSpace="pre-line"
+          >
+            {articleText}
+          </Text>
+        </VStack>
 
-        <Text as="article" paddingX="40px" lineHeight={"9"}>
-          {articleText}
-        </Text>
         {orientation === "flex-end" && (
           <Image alt="" src={image} sizes="300px" />
         )}
