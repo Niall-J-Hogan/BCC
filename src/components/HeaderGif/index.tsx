@@ -72,6 +72,7 @@ export const HeaderGif = ({
               padding={"5px"}
               color="white"
               backgroundColor={"#4900CD"}
+              textAlign={"center"}
             >
               {subtitle}
             </Text>
