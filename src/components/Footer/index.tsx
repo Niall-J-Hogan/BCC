@@ -1,5 +1,19 @@
-import { HStack, Text, VStack } from "@chakra-ui/react";
+import { HStack, Text, VStack, useBreakpointValue } from "@chakra-ui/react";
 export const Footer = () => {
+  const headingSize = useBreakpointValue({
+    base: "md", // Mobile devices
+    md: "xl", // Medium screens
+  });
+
+  const displayMaps = useBreakpointValue({
+    base: "none", // Mobile devices
+    md: "inline-flex", // Medium screens
+  });
+
+  const subHeadingSize = useBreakpointValue({
+    base: "sm", // Mobile devices
+    md: "xl", // Medium screens
+  });
   return (
     <VStack width="full" height="200px" backgroundColor={"#5B19D2"}>
       <HStack
@@ -8,8 +22,8 @@ export const Footer = () => {
         display={"flex"}
         justifyContent={"space-evenly"}
       >
-        <VStack align={"flex-start"}>
-          <Text color="white" fontSize={"xl"} fontWeight={"bolder"}>
+        <VStack align={"flex-start"} display={displayMaps}>
+          <Text color="white" fontSize={headingSize} fontWeight={"bolder"}>
             Where To Find Us?
           </Text>
           <Text color="white">Alma St Sheffield S3 8SA</Text>
@@ -17,20 +31,32 @@ export const Footer = () => {
           <Text color="white">S3 8SA</Text>
         </VStack>
         <VStack align={"flex-start"}>
-          <Text color="white" fontSize={"xl"} fontWeight={"bolder"}>
+          <Text color="white" fontSize={headingSize} fontWeight={"bolder"}>
             FAQ
           </Text>
-          <Text color="white">Parking</Text>
-          <Text color="white">What To Bring?</Text>
-          <Text color="white">Tattoo Aftercare?</Text>
+          <Text color="white" fontSize={subHeadingSize}>
+            Parking
+          </Text>
+          <Text color="white" fontSize={subHeadingSize}>
+            What To Bring?
+          </Text>
+          <Text color="white" fontSize={subHeadingSize}>
+            Tattoo Aftercare?
+          </Text>
         </VStack>
         <VStack align={"flex-start"}>
-          <Text color="white" fontSize={"xl"} fontWeight={"bolder"}>
+          <Text color="white" fontSize={headingSize} fontWeight={"bolder"}>
             Links
           </Text>
-          <Text color="white">Instagram</Text>
-          <Text color="white">Maps</Text>
-          <Text color="white">Venue</Text>
+          <Text color="white" fontSize={subHeadingSize}>
+            Instagram
+          </Text>
+          <Text color="white" fontSize={subHeadingSize}>
+            Maps
+          </Text>
+          <Text color="white" fontSize={subHeadingSize}>
+            Venue
+          </Text>
         </VStack>
       </HStack>
     </VStack>
