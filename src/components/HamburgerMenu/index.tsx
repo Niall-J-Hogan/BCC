@@ -28,16 +28,22 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
         borderRadius={"10px"}
         width="120px"
         marginLeft={"auto"}
-        py="30px"
+        py="10px"
       >
         <HStack height="50px">
           <DrawerCloseButton />
         </HStack>
         <DrawerBody margin={"auto"}>
-          <VStack spacing={6} width="auto" p="0px" margin={"auto"}>
-            <Link color={"white"}>Home</Link>
-            <Link color={"white"}>Artists</Link>
-            <Link color={"white"}>Vendors</Link>
+          <VStack spacing={5} width="auto" p="0px" margin={"auto"}>
+            <Link color={"white"} href="/app/homepage">
+              Home
+            </Link>
+            <Link color={"white"} href="/app/artists">
+              Artists
+            </Link>
+            <Link color={"white"} href="/app/vendors">
+              Vendors
+            </Link>
             <Link color={"white"}>Contact</Link>
           </VStack>
         </DrawerBody>
