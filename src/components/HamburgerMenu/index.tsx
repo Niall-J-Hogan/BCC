@@ -38,11 +38,11 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
             <Link color={"white"} href="/app/homepage">
               Home
             </Link>
-            <Link color={"white"} href="/app/artists">
-              Artists
+            <Link color={"white"} href="/app/artists" textAlign={"center"}>
+              Artists Application
             </Link>
-            <Link color={"white"} href="/app/vendors">
-              Vendors
+            <Link color={"white"} href="/app/vendors" textAlign={"center"}>
+              Vendors Application
             </Link>
             <Link color={"white"}>Contact</Link>
           </VStack>
