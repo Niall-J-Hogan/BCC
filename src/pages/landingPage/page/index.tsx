@@ -17,8 +17,8 @@ export const LandingPage = () => {
       </VStack>
 
       <HeaderGif
-        title={"A Tattoo Convention by Tattooers, for Sheffield!"}
-        subtitle={"31/08/2024 - 01/09/2024"}
+        title={"Seven Hills Tattoo Convention"}
+        subtitle={"01/09/2024 - 02/09/2024"}
         tagline="Kelham Island Museum"
       />
 
@@ -34,6 +34,7 @@ export const LandingPage = () => {
             title="By Tattooers. For The People Of Sheffield"
             articleText={byTattoers}
             image={"/kelham.jpg"}
+            textOrientation="flex-end"
           />
         )}
 
@@ -41,14 +42,15 @@ export const LandingPage = () => {
           <MobileArticleComponent
             title="When Is it?"
             articleText={whenIsIt}
-            image={"/kelham.jpg"}
+            image={"/foundry.jpeg"}
           />
         ) : (
           <ArticleComponent
             title="When Is it?"
             articleText={whenIsIt}
-            image={"/kelham.jpg"}
-            orientation="flex-end"
+            image={"/foundry.jpeg"}
+            textOrientation="flex-start"
+            imageOrientation="flex-end"
           />
         )}
 
@@ -63,7 +65,7 @@ export const LandingPage = () => {
             title="The Venue"
             articleText={theVenue}
             image={"/kelham.jpg"}
-            orientation="flex-start"
+            textOrientation="flex-end"
           />
         )}
 
@@ -71,14 +73,15 @@ export const LandingPage = () => {
           <MobileArticleComponent
             title="The Vendors"
             articleText={theVendors}
-            image={"/kelham.jpg"}
+            image={"/food.jpeg"}
           />
         ) : (
           <ArticleComponent
             title="The Vendors"
             articleText={theVendors}
-            image={"/kelham.jpg"}
-            orientation="flex-end"
+            image={"/food.jpeg"}
+            textOrientation="flex-start"
+            imageOrientation="flex-end"
           />
         )}
       </VStack>
