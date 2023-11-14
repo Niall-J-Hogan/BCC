@@ -24,7 +24,7 @@ export const MobileArticleComponent = ({
       >
         {title}
       </Heading>
-      <VStack marginTop="50px" height="full">
+      <VStack marginTop="30px" height="full">
         {orientation === "flex-start" && (
           <Image alt="" src={image} sizes="300px" />
         )}

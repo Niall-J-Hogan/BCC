@@ -5,14 +5,16 @@ interface IArticleComponent {
   title: string;
   articleText: string;
   image: string;
-  orientation?: string;
+  imageOrientation?: string;
+  textOrientation?: string;
 }
 
 export const ArticleComponent = ({
   image,
   articleText,
   title,
-  orientation = "flex-start",
+  imageOrientation = "flex-start",
+  textOrientation = "flex-start",
 }: IArticleComponent) => {
   return (
     <VStack>
@@ -22,12 +24,13 @@ export const ArticleComponent = ({
         color="black  "
         padding={"5px"}
         fontStyle={"italic"}
-        alignSelf={orientation}
+        alignSelf={textOrientation}
+        borderBottom={"solid 2px black"}
       >
         {title}
       </Heading>
-      <HStack marginTop="50px" height="full">
-        {orientation === "flex-start" && (
+      <HStack marginTop="20px" height="full">
+        {imageOrientation === "flex-start" && (
           <Image alt="" src={image} sizes="300px" />
         )}
         <VStack height="full">
@@ -42,7 +45,7 @@ export const ArticleComponent = ({
           </Text>
         </VStack>
 
-        {orientation === "flex-end" && (
+        {imageOrientation === "flex-end" && (
           <Image alt="" src={image} sizes="300px" />
         )}
       </HStack>
