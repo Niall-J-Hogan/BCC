@@ -45,11 +45,17 @@ export const NavBar = () => {
           <Link fontWeight="semibold" href="/app/homepage">
             Home
           </Link>
-          <Link fontWeight="semibold" href="/app/artists">
-            Artists
+          <Link
+            fontWeight="semibold"
+            onClick={() => handleClick("https://forms.gle/nTc8Rg9tX61D5KwP9")}
+          >
+            Artists Application
           </Link>
-          <Link fontWeight="semibold" href="/app/vendors">
-            Vendors
+          <Link
+            fontWeight="semibold"
+            onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
+          >
+            Vendors Application
           </Link>
           <Link fontWeight="semibold">Contact</Link>
           <Link fontWeight="semibold">
