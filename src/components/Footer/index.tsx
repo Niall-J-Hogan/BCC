@@ -1,4 +1,10 @@
-import { HStack, Text, VStack, useBreakpointValue } from "@chakra-ui/react";
+import {
+  HStack,
+  Link,
+  Text,
+  VStack,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 export const Footer = () => {
   const headingSize = useBreakpointValue({
     base: "md", // Mobile devices
@@ -14,6 +20,15 @@ export const Footer = () => {
     base: "sm", // Mobile devices
     md: "xl", // Medium screens
   });
+
+  const handleClick = (websiteLink: string) => {
+    if (websiteLink) {
+      window.open(
+        websiteLink,
+        "_blank" // <- This is what makes it open in a new window.
+      );
+    }
+  };
   return (
     <VStack width="full" height="200px" backgroundColor={"#5B19D2"}>
       <HStack
@@ -22,15 +37,21 @@ export const Footer = () => {
         display={"flex"}
         justifyContent={"space-evenly"}
       >
-        <VStack align={"flex-start"} display={displayMaps}>
+        <VStack align={"flex-start"}>
           <Text color="white" fontSize={headingSize} fontWeight={"bolder"}>
             Where To Find Us?
           </Text>
-          <Text color="white">Alma St Sheffield S3 8SA</Text>
-          <Text color="white">Sheffield</Text>
-          <Text color="white">S3 8SA</Text>
+          <Text color="white" fontSize={subHeadingSize}>
+            Alma St Sheffield S3 8SA
+          </Text>
+          <Text color="white" fontSize={subHeadingSize}>
+            Sheffield
+          </Text>
+          <Text color="white" fontSize={subHeadingSize}>
+            S3 8SA
+          </Text>
         </VStack>
-        <VStack align={"flex-start"}>
+        {/* <VStack align={"flex-start"}>
           <Text color="white" fontSize={headingSize} fontWeight={"bolder"}>
             FAQ
           </Text>
@@ -43,20 +64,45 @@ export const Footer = () => {
           <Text color="white" fontSize={subHeadingSize}>
             Tattoo Aftercare?
           </Text>
-        </VStack>
+        </VStack> */}
         <VStack align={"flex-start"}>
           <Text color="white" fontSize={headingSize} fontWeight={"bolder"}>
             Links
           </Text>
-          <Text color="white" fontSize={subHeadingSize}>
+          <Link
+            color="white"
+            fontSize={subHeadingSize}
+            onClick={() =>
+              handleClick(
+                "https://www.instagram.com/sevenhillstattooconvention"
+              )
+            }
+          >
             Instagram
-          </Text>
-          <Text color="white" fontSize={subHeadingSize}>
-            Maps
-          </Text>
-          <Text color="white" fontSize={subHeadingSize}>
+          </Link>
+
+          <Link
+            color="white"
+            fontSize={subHeadingSize}
+            onClick={() =>
+              handleClick("https://maps.app.goo.gl/Dv2YMaXJof475g9d7")
+            }
+            cursor={"pointer"}
+          >
             Venue
-          </Text>
+          </Link>
+          <Link
+            color="white"
+            fontSize={subHeadingSize}
+            onClick={() =>
+              window.open(
+                "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry"
+              )
+            }
+            cursor={"pointer"}
+          >
+            Contact Us
+          </Link>
         </VStack>
       </HStack>
     </VStack>
