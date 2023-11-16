@@ -35,6 +35,7 @@ export const MobileArticleComponent = ({
             fontWeight={"semibold"}
             whiteSpace="pre-line"
             py="10px"
+            textAlign={"center"}
           >
             {articleText}
           </Text>
