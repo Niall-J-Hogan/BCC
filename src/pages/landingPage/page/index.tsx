@@ -18,7 +18,7 @@ export const LandingPage = () => {
 
       <HeaderGif
         title={"Seven Hills Tattoo Convention"}
-        subtitle={"01/09/2024 - 02/09/2024"}
+        subtitle={"31/08/2024 - 01/09/2024"}
         tagline="Kelham Island Museum"
       />
 
@@ -27,13 +27,13 @@ export const LandingPage = () => {
           <MobileArticleComponent
             title="By Tattooers. For The People Of Sheffield"
             articleText={byTattoers}
-            image={"/kelham.jpg"}
+            image={"/byTattooers.jpeg"}
           />
         ) : (
           <ArticleComponent
             title="By Tattooers. For The People Of Sheffield"
             articleText={byTattoers}
-            image={"/kelham.jpg"}
+            image={"/byTattooers.jpeg"}
             textOrientation="flex-end"
           />
         )}
