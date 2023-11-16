@@ -15,6 +15,14 @@ interface IHamburgerMenu {
   btnRef: React.MutableRefObject<null>;
 }
 export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
+  const handleClick = (websiteLink: string) => {
+    if (websiteLink) {
+      window.open(
+        websiteLink,
+        "_blank" // <- This is what makes it open in a new window.
+      );
+    }
+  };
   return (
     <Drawer
       isOpen={isOpen}
@@ -38,13 +46,30 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
             <Link color={"white"} href="/app/homepage">
               Home
             </Link>
-            <Link color={"white"} href="/app/artists" textAlign={"center"}>
+            <Link
+              color={"white"}
+              onClick={() => handleClick("https://forms.gle/nTc8Rg9tX61D5KwP9")}
+              textAlign={"center"}
+            >
               Artists Application
             </Link>
-            <Link color={"white"} href="/app/vendors" textAlign={"center"}>
+            <Link
+              color={"white"}
+              onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
+              textAlign={"center"}
+            >
               Vendors Application
             </Link>
-            <Link color={"white"}>Contact</Link>
+            <Link
+              color={"white"}
+              onClick={() =>
+                window.open(
+                  "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry"
+                )
+              }
+            >
+              Contact
+            </Link>
           </VStack>
         </DrawerBody>
       </DrawerContent>

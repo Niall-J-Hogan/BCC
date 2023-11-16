@@ -57,7 +57,16 @@ export const NavBar = () => {
           >
             Vendors Application
           </Link>
-          <Link fontWeight="semibold">Contact</Link>
+          <Link
+            fontWeight="semibold"
+            onClick={() =>
+              window.open(
+                "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry"
+              )
+            }
+          >
+            Contact Us
+          </Link>
           <Link fontWeight="semibold">
             <SlSocialInstagram
               size={32}
