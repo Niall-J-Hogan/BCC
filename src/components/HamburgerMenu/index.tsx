@@ -55,10 +55,10 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
             </Link>
             <Link
               color={"white"}
-              onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
+              // onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
               textAlign={"center"}
             >
-              Vendors Application
+              Vendors Application Coming Soon!
             </Link>
             <Link
               color={"white"}

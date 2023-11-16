@@ -10,6 +10,9 @@ import { byTattoers, theVendors, theVenue, whenIsIt } from "../data/copy";
 
 export const LandingPage = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
+  const [isIpad] = useMediaQuery("(max-width: 1024px)");
+  const [isIpadHorizontal] = useMediaQuery("(max-width: 1366px)");
+
   return (
     <VStack spacing={0} backgroundColor={"#E4FDE1"}>
       <VStack w="full" h="full">
@@ -23,7 +26,7 @@ export const LandingPage = () => {
       />
 
       <VStack height="auto" width="80%" paddingY={"50px"}>
-        {isMobile ? (
+        {isMobile || isIpad || isIpadHorizontal ? (
           <MobileArticleComponent
             title="By Tattooers. For The People Of Sheffield"
             articleText={byTattoers}
@@ -38,7 +41,7 @@ export const LandingPage = () => {
           />
         )}
 
-        {isMobile ? (
+        {isMobile || isIpad || isIpadHorizontal ? (
           <MobileArticleComponent
             title="When Is it?"
             articleText={whenIsIt}
@@ -54,7 +57,7 @@ export const LandingPage = () => {
           />
         )}
 
-        {isMobile ? (
+        {isMobile || isIpad || isIpadHorizontal ? (
           <MobileArticleComponent
             title="The Venue"
             articleText={theVenue}
@@ -69,7 +72,7 @@ export const LandingPage = () => {
           />
         )}
 
-        {isMobile ? (
+        {isMobile || isIpad || isIpadHorizontal ? (
           <MobileArticleComponent
             title="The Vendors"
             articleText={theVendors}

@@ -21,6 +21,7 @@ export const MobileArticleComponent = ({
         padding={"5px"}
         fontStyle={"italic"}
         alignSelf={orientation}
+        borderBottom={"solid 2px black"}
       >
         {title}
       </Heading>

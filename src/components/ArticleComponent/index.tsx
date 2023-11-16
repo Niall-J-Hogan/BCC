@@ -1,4 +1,11 @@
-import { HStack, VStack, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  HStack,
+  VStack,
+  Heading,
+  Image,
+  Text,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import React from "react";
 
 interface IArticleComponent {
@@ -31,7 +38,7 @@ export const ArticleComponent = ({
       </Heading>
       <HStack marginTop="20px" height="full">
         {imageOrientation === "flex-start" && (
-          <Image alt="" src={image} sizes="300px" />
+          <Image alt="" src={image} max-width={"100%"} width={"auto"} />
         )}
         <VStack height="full">
           <Text
@@ -46,7 +53,7 @@ export const ArticleComponent = ({
         </VStack>
 
         {imageOrientation === "flex-end" && (
-          <Image alt="" src={image} sizes="300px" />
+          <Image alt="" src={image} max-width={"100%"} width={"auto"} />
         )}
       </HStack>
     </VStack>
