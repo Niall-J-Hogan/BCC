@@ -1,7 +1,7 @@
-import { Home } from "@/pages/home";
+import { Landing } from "@/pages/landingPage";
 
 const index = () => {
-  return <Home />;
+  return <Landing />;
 };
 
 export default index;
