@@ -42,7 +42,14 @@ export const HeaderGif = ({
     base: "80%", // Mobile devices
     md: "35%", // Large screens and up
   });
-
+  const handleClick = (websiteLink: string) => {
+    if (websiteLink) {
+      window.open(
+        websiteLink,
+        "_blank" // <- This is what makes it open in a new window.
+      );
+    }
+  };
   return (
     <VStack marginTop={headerMargin} height="full" paddingTop={gifMargin}>
       <Box
@@ -101,6 +108,7 @@ export const HeaderGif = ({
               backgroundColor={"#CDAF00"}
               size={"lg"}
               width={buttonSize}
+              onClick={() => handleClick("https://forms.gle/nTc8Rg9tX61D5KwP9")}
             >
               Artist Application
             </Button>
