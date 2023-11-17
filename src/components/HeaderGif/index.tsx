@@ -38,6 +38,11 @@ export const HeaderGif = ({
     md: "6px", // Large screens and up
   });
 
+  const buttonSize = useBreakpointValue({
+    base: "80%", // Mobile devices
+    md: "35%", // Large screens and up
+  });
+
   return (
     <VStack marginTop={headerMargin} height="full" paddingTop={gifMargin}>
       <Box
@@ -66,6 +71,19 @@ export const HeaderGif = ({
               {title}
             </Heading>
           )}
+          {tagline && (
+            <Heading
+              as="h4"
+              size={headingSize}
+              color="#CDAF00"
+              zIndex={99}
+              flexWrap={"nowrap"}
+              padding={"5px"}
+              backgroundColor={"#4900CD"}
+            >
+              {tagline}
+            </Heading>
+          )}
           {subtitle && (
             <Text
               fontSize={headingSize}
@@ -77,18 +95,15 @@ export const HeaderGif = ({
               {subtitle}
             </Text>
           )}
-          {tagline && (
-            <Heading
-              as="h4"
-              size={headingSize}
-              color="#CDAF00"
-              zIndex={99}
-              flexWrap={"nowrap"}
-              padding={"5px"}
-              backgroundColor={!isButton ? "#4900CD" : ""}
+          {isButton && (
+            <Button
+              color={"white"}
+              backgroundColor={"#CDAF00"}
+              size={"lg"}
+              width={buttonSize}
             >
-              {tagline}
-            </Heading>
+              Artist Application
+            </Button>
           )}
         </VStack>
       </Box>

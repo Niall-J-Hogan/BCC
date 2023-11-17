@@ -23,6 +23,7 @@ export const LandingPage = () => {
         title={"Seven Hills Tattoo Convention"}
         subtitle={"31/08/2024 - 01/09/2024"}
         tagline="Kelham Island Museum"
+        isButton={true}
       />
 
       <VStack height="auto" width="80%" paddingY={"50px"}>
