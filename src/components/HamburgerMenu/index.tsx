@@ -34,29 +34,27 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
       <DrawerContent
         backgroundColor={"#979BFF"}
         borderRadius={"10px"}
-        width="120px"
+        width="80%"
         marginLeft={"auto"}
         py="10px"
       >
         <HStack height="50px">
           <DrawerCloseButton />
         </HStack>
-        <DrawerBody margin={"auto"}>
-          <VStack spacing={5} width="auto" p="0px" margin={"auto"}>
+        <DrawerBody>
+          <VStack spacing={6} p="0px" align="flex-end">
             <Link color={"white"} href="/app/homepage">
               Home
             </Link>
             <Link
               color={"white"}
               onClick={() => handleClick("https://forms.gle/nTc8Rg9tX61D5KwP9")}
-              textAlign={"center"}
             >
               Artists Application
             </Link>
             <Link
               color={"white"}
               // onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
-              textAlign={"center"}
             >
               Vendors Application Coming Soon!
             </Link>
