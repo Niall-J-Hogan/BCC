@@ -73,10 +73,11 @@ export const NavBar = () => {
           ref={btnRef}
           aria-label="Open Menu"
           color={"white"}
-          icon={<GiHamburgerMenu />}
+          icon={<GiHamburgerMenu size={32} />}
           onClick={onOpen}
-          bg="#979BFF"
+          bg="none"
           display={{ base: "flex", md: "none" }}
+          _focus={{ boxShadow: "none" }}
         />
       </Flex>
       <HamburgerMenu isOpen={isOpen} onClose={onClose} btnRef={btnRef} />
