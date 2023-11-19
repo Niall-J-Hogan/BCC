@@ -1,3 +1,4 @@
+import { handleClick } from "@/utils/handleClickNewWindow";
 import {
   HStack,
   Link,
@@ -11,24 +12,11 @@ export const Footer = () => {
     md: "xl", // Medium screens
   });
 
-  const displayMaps = useBreakpointValue({
-    base: "none", // Mobile devices
-    md: "inline-flex", // Medium screens
-  });
-
   const subHeadingSize = useBreakpointValue({
     base: "sm", // Mobile devices
     md: "xl", // Medium screens
   });
 
-  const handleClick = (websiteLink: string) => {
-    if (websiteLink) {
-      window.open(
-        websiteLink,
-        "_blank" // <- This is what makes it open in a new window.
-      );
-    }
-  };
   return (
     <VStack width="full" height="200px" backgroundColor={"#5B19D2"}>
       <HStack
@@ -95,7 +83,7 @@ export const Footer = () => {
             color="white"
             fontSize={subHeadingSize}
             onClick={() =>
-              window.open(
+              handleClick(
                 "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry"
               )
             }

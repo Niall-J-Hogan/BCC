@@ -7,6 +7,7 @@ import {
   VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { handleClick } from "@/utils/handleClickNewWindow";
 
 interface IHeaderGif {
   title?: string;
@@ -42,14 +43,7 @@ export const HeaderGif = ({
     base: "80%", // Mobile devices
     md: "35%", // Large screens and up
   });
-  const handleClick = (websiteLink: string) => {
-    if (websiteLink) {
-      window.open(
-        websiteLink,
-        "_blank" // <- This is what makes it open in a new window.
-      );
-    }
-  };
+
   return (
     <VStack marginTop={headerMargin} height="full" paddingTop={gifMargin}>
       <Box

@@ -1,3 +1,4 @@
+import { handleClick } from "@/utils/handleClickNewWindow";
 import {
   Drawer,
   DrawerBody,
@@ -15,14 +16,6 @@ interface IHamburgerMenu {
   btnRef: React.MutableRefObject<null>;
 }
 export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
-  const handleClick = (websiteLink: string) => {
-    if (websiteLink) {
-      window.open(
-        websiteLink,
-        "_blank" // <- This is what makes it open in a new window.
-      );
-    }
-  };
   return (
     <Drawer
       isOpen={isOpen}
@@ -61,7 +54,7 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
             <Link
               color={"white"}
               onClick={() =>
-                window.open(
+                handleClick(
                   "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry"
                 )
               }

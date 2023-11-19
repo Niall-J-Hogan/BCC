@@ -1,5 +1,6 @@
 import React from "react";
 import { VStack, Image, Text, useBreakpointValue } from "@chakra-ui/react";
+import { handleClick } from "@/utils/handleClickNewWindow";
 
 interface ISponsorLogoBox {
   title: string;
@@ -30,23 +31,10 @@ export const SponsorLogoBox = ({
     md: "xl", // Medium screens
   });
 
-  const widthSize = useBreakpointValue({
-    base: "100vw", // Mobile devices
-    md: "60vw", // Medium screens
-  });
   const hideText = useBreakpointValue({
     base: "none", // Mobile devices
     md: "", // Medium screens
   });
-
-  const handleClick = () => {
-    if (websiteLink) {
-      window.open(
-        websiteLink,
-        "_blank" // <- This is what makes it open in a new window.
-      );
-    }
-  };
 
   return (
     <VStack width={"50vw"} height="full">
@@ -55,7 +43,7 @@ export const SponsorLogoBox = ({
         alt={altText}
         height={gifSize}
         py="5px"
-        onClick={handleClick}
+        onClick={() => handleClick(websiteLink)}
         cursor={"pointer"}
       />
       <Text fontSize={headingSize} display={hideText}>

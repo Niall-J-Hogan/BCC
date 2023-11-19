@@ -1,12 +1,4 @@
-import {
-  HStack,
-  VStack,
-  Heading,
-  Image,
-  Text,
-  useMediaQuery,
-} from "@chakra-ui/react";
-import React from "react";
+import { HStack, Heading, Image, Text, VStack } from "@chakra-ui/react";
 
 interface IArticleComponent {
   title: string;
