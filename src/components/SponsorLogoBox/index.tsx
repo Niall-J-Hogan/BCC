@@ -38,6 +38,8 @@ export const SponsorLogoBox = ({
         fontSize={sponsorLogoBox.sponsorSubTitleSize}
         fontStyle={"italic"}
         display={sponsorLogoBox.hideText}
+        textAlign={"center"}
+        width="full"
       >
         {subtitle}
       </Text>

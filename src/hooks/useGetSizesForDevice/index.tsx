@@ -43,6 +43,11 @@ export const UseGetSizeForDevices = () => {
     base: "none", // Mobile devices
     md: "", // Medium screens
   });
+  //Sponsor Container
+  const widthSize = useBreakpointValue({
+    base: "100vw", // Mobile devices
+    md: "80vw", // Medium screens
+  });
   // Footer
   const headingSize = useBreakpointValue({
     base: "md", // Mobile devices
@@ -67,6 +72,10 @@ export const UseGetSizeForDevices = () => {
       sponsorTitleSize,
       sponsorSubTitleSize,
       hideText,
+    },
+    sponsorLogoContainer: {
+      headingSize,
+      widthSize,
     },
     footer: {
       headingSize,

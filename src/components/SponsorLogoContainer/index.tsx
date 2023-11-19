@@ -1,21 +1,14 @@
-import { HStack, Heading, VStack, useBreakpointValue } from "@chakra-ui/react";
+import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
+import { HStack, Heading, VStack } from "@chakra-ui/react";
 import { SponsorLogoBox } from "../SponsorLogoBox/index";
 export const SponsorLogoContainer = () => {
-  const widthSize = useBreakpointValue({
-    base: "100vw", // Mobile devices
-    md: "60vw", // Medium screens
-  });
-
-  const headingSize = useBreakpointValue({
-    base: "md", // Mobile devices
-    md: "xl", // Medium screens
-  });
+  const { sponsorLogoContainer } = UseGetSizeForDevices();
 
   return (
     <VStack width={"full"} marginBottom={"50px"}>
       <Heading
         as="h2"
-        size={headingSize}
+        size={sponsorLogoContainer.headingSize}
         color="White "
         fontStyle={"italic"}
         backgroundColor={"#4900CD"}
@@ -24,7 +17,7 @@ export const SponsorLogoContainer = () => {
         Proudly Supported By
       </Heading>
       <HStack
-        width={widthSize}
+        width={sponsorLogoContainer.widthSize}
         height="full"
         display={"flex"}
         justifyContent={"space-between"}
@@ -45,7 +38,7 @@ export const SponsorLogoContainer = () => {
         />
         <SponsorLogoBox
           title="Liquid Death"
-          subtitle="Environmentally Friendly Water"
+          subtitle="Eco-friendly Water"
           altText="Liquid Death Mountain Water"
           imageLink="/LDlogo.png"
           websiteLink="https://liquiddeath.com/en-gb"
