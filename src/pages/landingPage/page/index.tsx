@@ -1,4 +1,4 @@
-import { VStack, useMediaQuery } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 
 import { ArticleComponent } from "@/components/ArticleComponent";
 import { Footer } from "@/components/Footer";
@@ -6,13 +6,11 @@ import { HeaderGif } from "@/components/HeaderGif";
 import { MobileArticleComponent } from "@/components/MobileArticleComponent";
 import { NavBar } from "@/components/NavBar";
 import { SponsorLogoContainer } from "@/components/SponsorLogoContainer";
+import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 import { byTattoers, theVendors, theVenue, whenIsIt } from "../data/copy";
 
 export const LandingPage = () => {
-  const [isMobile] = useMediaQuery("(max-width: 768px)");
-  const [isIpad] = useMediaQuery("(max-width: 1024px)");
-  const [isIpadHorizontal] = useMediaQuery("(max-width: 1366px)");
-
+  const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
   return (
     <VStack spacing={0} backgroundColor={"#E4FDE1"}>
       <VStack w="full" h="full">
