@@ -1,22 +1,8 @@
+import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
 import { handleClick } from "@/utils/handleClickNewWindow";
-import {
-  HStack,
-  Link,
-  Text,
-  VStack,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { HStack, Link, Text, VStack } from "@chakra-ui/react";
 export const Footer = () => {
-  const headingSize = useBreakpointValue({
-    base: "md", // Mobile devices
-    md: "xl", // Medium screens
-  });
-
-  const subHeadingSize = useBreakpointValue({
-    base: "sm", // Mobile devices
-    md: "xl", // Medium screens
-  });
-
+  const { footer } = UseGetSizeForDevices();
   return (
     <VStack width="full" height="200px" backgroundColor={"#5B19D2"}>
       <HStack
@@ -26,16 +12,20 @@ export const Footer = () => {
         justifyContent={"space-evenly"}
       >
         <VStack align={"flex-start"}>
-          <Text color="white" fontSize={headingSize} fontWeight={"bolder"}>
+          <Text
+            color="white"
+            fontSize={footer.headingSize}
+            fontWeight={"bolder"}
+          >
             Where To Find Us?
           </Text>
-          <Text color="white" fontSize={subHeadingSize}>
+          <Text color="white" fontSize={footer.subHeadingSize}>
             Alma St Sheffield S3 8SA
           </Text>
-          <Text color="white" fontSize={subHeadingSize}>
+          <Text color="white" fontSize={footer.subHeadingSize}>
             Sheffield
           </Text>
-          <Text color="white" fontSize={subHeadingSize}>
+          <Text color="white" fontSize={footer.subHeadingSize}>
             S3 8SA
           </Text>
         </VStack>
@@ -54,12 +44,16 @@ export const Footer = () => {
           </Text>
         </VStack> */}
         <VStack align={"flex-start"}>
-          <Text color="white" fontSize={headingSize} fontWeight={"bolder"}>
+          <Text
+            color="white"
+            fontSize={footer.headingSize}
+            fontWeight={"bolder"}
+          >
             Links
           </Text>
           <Link
             color="white"
-            fontSize={subHeadingSize}
+            fontSize={footer.subHeadingSize}
             onClick={() =>
               handleClick(
                 "https://www.instagram.com/sevenhillstattooconvention"
@@ -71,7 +65,7 @@ export const Footer = () => {
 
           <Link
             color="white"
-            fontSize={subHeadingSize}
+            fontSize={footer.subHeadingSize}
             onClick={() =>
               handleClick("https://maps.app.goo.gl/Dv2YMaXJof475g9d7")
             }
@@ -81,7 +75,7 @@ export const Footer = () => {
           </Link>
           <Link
             color="white"
-            fontSize={subHeadingSize}
+            fontSize={footer.subHeadingSize}
             onClick={() =>
               handleClick(
                 "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry"
