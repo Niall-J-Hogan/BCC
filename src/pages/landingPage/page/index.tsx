@@ -1,4 +1,4 @@
-import { VStack, useMediaQuery } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 
 import { ArticleComponent } from "@/components/ArticleComponent";
 import { Footer } from "@/components/Footer";
@@ -6,15 +6,21 @@ import { HeaderGif } from "@/components/HeaderGif";
 import { MobileArticleComponent } from "@/components/MobileArticleComponent";
 import { NavBar } from "@/components/NavBar";
 import { SponsorLogoContainer } from "@/components/SponsorLogoContainer";
+import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 import { byTattoers, theVendors, theVenue, whenIsIt } from "../data/copy";
+import Head from "next/head";
 
 export const LandingPage = () => {
-  const [isMobile] = useMediaQuery("(max-width: 768px)");
-  const [isIpad] = useMediaQuery("(max-width: 1024px)");
-  const [isIpadHorizontal] = useMediaQuery("(max-width: 1366px)");
-
+  const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
   return (
     <VStack spacing={0} backgroundColor={"#E4FDE1"}>
+      <Head>
+        <title>7 Hills Tatoo Convention</title>
+        <meta
+          name="Seven Hills Tattoo Convention | Sheffield’s Best Tattoo Convention"
+          content="Seven Hills is Sheffield’s newest and best artist-run tattoo convention. Featuring the best artists from the UK and beyond, Seven Hills is by tattooers, for the people."
+        />
+      </Head>
       <VStack w="full" h="full">
         <NavBar />
       </VStack>
@@ -26,7 +32,7 @@ export const LandingPage = () => {
         isButton={true}
       />
 
-      <VStack height="auto" width="80%" paddingY={"50px"}>
+      <VStack height="auto" width="80%" paddingY={"50px"} gap={10}>
         {isMobile || isIpad || isIpadHorizontal ? (
           <MobileArticleComponent
             title="By Tattooers. For The People Of Sheffield"

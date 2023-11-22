@@ -1,12 +1,6 @@
-import React from "react";
-import {
-  Box,
-  Button,
-  Heading,
-  Text,
-  VStack,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
+import { handleClick } from "@/utils/handleClickNewWindow";
+import { Box, Button, Heading, Text, VStack } from "@chakra-ui/react";
 
 interface IHeaderGif {
   title?: string;
@@ -20,45 +14,21 @@ export const HeaderGif = ({
   tagline,
   isButton = false,
 }: IHeaderGif) => {
-  const headingSize = useBreakpointValue({
-    base: "sm", // Mobile devices
-    md: "2xl", // Medium screens
-  });
+  const { headerGif } = UseGetSizeForDevices();
 
-  const gifSize = useBreakpointValue({
-    base: "50vh", // Mobile devices
-    md: "60vh", // Large screens and up
-  });
-  const headerMargin = useBreakpointValue({
-    base: "65px", // Mobile devices
-    md: "60px", // Large screens and up
-  });
-  const gifMargin = useBreakpointValue({
-    base: "8px", // Mobile devices
-    md: "6px", // Large screens and up
-  });
-
-  const buttonSize = useBreakpointValue({
-    base: "80%", // Mobile devices
-    md: "35%", // Large screens and up
-  });
-  const handleClick = (websiteLink: string) => {
-    if (websiteLink) {
-      window.open(
-        websiteLink,
-        "_blank" // <- This is what makes it open in a new window.
-      );
-    }
-  };
   return (
-    <VStack marginTop={headerMargin} height="full" paddingTop={gifMargin}>
+    <VStack
+      marginTop={headerGif.gifMargin}
+      height="full"
+      paddingTop={headerGif.gifPadding}
+    >
       <Box
         backgroundImage={`/Video.gif`}
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         width="100vw"
-        h={gifSize}
+        h={headerGif.gifSize}
       >
         <VStack
           spacing={10}
@@ -69,7 +39,7 @@ export const HeaderGif = ({
           {title && (
             <Heading
               as="h2"
-              size={headingSize}
+              size={headerGif.textSize}
               color="#FEFAE0"
               backgroundColor={"#4900CD"}
               padding={"5px"}
@@ -81,7 +51,7 @@ export const HeaderGif = ({
           {tagline && (
             <Heading
               as="h4"
-              size={headingSize}
+              size={headerGif.textSize}
               color="#CDAF00"
               zIndex={99}
               flexWrap={"nowrap"}
@@ -93,7 +63,7 @@ export const HeaderGif = ({
           )}
           {subtitle && (
             <Text
-              fontSize={headingSize}
+              fontSize={headerGif.textSize}
               padding={"5px"}
               color="white"
               backgroundColor={"#4900CD"}
@@ -107,7 +77,7 @@ export const HeaderGif = ({
               color={"white"}
               backgroundColor={"#CDAF00"}
               size={"lg"}
-              width={buttonSize}
+              width={headerGif.gifButtonSize}
               onClick={() => handleClick("https://forms.gle/nTc8Rg9tX61D5KwP9")}
             >
               Artist Application

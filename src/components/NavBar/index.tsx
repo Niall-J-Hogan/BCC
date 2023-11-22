@@ -10,23 +10,13 @@ import {
 import React from "react";
 
 import { HamburgerMenu } from "@/components/HamburgerMenu";
-import { useRouter } from "next/router";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { SlSocialInstagram } from "react-icons/sl";
 import { NavBarLogo } from "../NavBarLogo";
+import { handleClick } from "@/utils/handleClickNewWindow";
 export const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const router = useRouter();
   const btnRef = React.useRef(null);
-
-  const handleClick = (websiteLink: string) => {
-    if (websiteLink) {
-      window.open(
-        websiteLink,
-        "_blank" // <- This is what makes it open in a new window.
-      );
-    }
-  };
 
   return (
     <Box
@@ -60,7 +50,7 @@ export const NavBar = () => {
           <Link
             fontWeight="semibold"
             onClick={() =>
-              window.open(
+              handleClick(
                 "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry"
               )
             }
@@ -83,10 +73,11 @@ export const NavBar = () => {
           ref={btnRef}
           aria-label="Open Menu"
           color={"white"}
-          icon={<GiHamburgerMenu />}
+          icon={<GiHamburgerMenu size={32} />}
           onClick={onOpen}
-          bg="#979BFF"
+          bg="none"
           display={{ base: "flex", md: "none" }}
+          _focus={{ boxShadow: "none" }}
         />
       </Flex>
       <HamburgerMenu isOpen={isOpen} onClose={onClose} btnRef={btnRef} />
