@@ -19,13 +19,13 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
   return (
     <Drawer
       isOpen={isOpen}
-      placement="top"
+      placement="bottom"
       onClose={onClose}
       finalFocusRef={btnRef}
     >
-      <DrawerOverlay backgroundBlendMode={"color-dodge"} />
+      <DrawerOverlay />
       <DrawerContent
-        backgroundColor={"#5B19D2"}
+        backgroundColor={"transparent"}
         //backgroundColor={"#979BFF"}
         opacity={1}
         // borderRadius={"10px"}
@@ -33,43 +33,49 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
         py="10px"
       >
         <HStack height="50px">
-          <DrawerCloseButton color="white" />
+          <DrawerCloseButton color="white" border={"white solid 2px"} />
         </HStack>
         <DrawerBody>
           <VStack spacing={6} p="0px" align="flex-end" w="full">
             <Link
               color={"white"}
               href="/app/homepage"
-              backgroundColor={"#979BFF"}
+              backgroundColor={"#5B19D2"}
               p="10px"
               border="solid white 2px"
               borderRadius={10}
+              w="full"
+              textAlign={"center"}
             >
               Home
             </Link>
             <Link
               color={"white"}
               onClick={() => handleClick("https://forms.gle/nTc8Rg9tX61D5KwP9")}
-              backgroundColor={"#979BFF"}
+              backgroundColor={"#5B19D2"}
               p="10px"
               border="solid white 2px"
               borderRadius={10}
+              w="full"
+              textAlign={"center"}
             >
               Artists Application
             </Link>
             <Link
               color={"white"}
-              backgroundColor={"#979BFF"}
+              backgroundColor={"#5B19D2"}
               p="10px"
               border="solid white 2px"
               borderRadius={10}
+              w="full"
+              textAlign={"center"}
               // onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
             >
               Vendors Application Coming Soon!
             </Link>
             <Link
               color={"white"}
-              backgroundColor={"#979BFF"}
+              backgroundColor={"#5B19D2"}
               p="10px"
               border="solid white 2px"
               borderRadius={10}
@@ -78,6 +84,8 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
                   "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry"
                 )
               }
+              w="full"
+              textAlign={"center"}
             >
               Contact
             </Link>
