@@ -15,7 +15,7 @@ export const LandingPage = () => {
   return (
     <VStack spacing={0} backgroundColor={"#E4FDE1"}>
       <Head>
-        <title>7 Hills Tatoo Convention</title>
+        <title>7 Hills Tattoo Convention</title>
         <meta
           name="Seven Hills Tattoo Convention | Sheffield’s Best Tattoo Convention"
           content="Seven Hills is Sheffield’s newest and best artist-run tattoo convention. Featuring the best artists from the UK and beyond, Seven Hills is by tattooers, for the people."
