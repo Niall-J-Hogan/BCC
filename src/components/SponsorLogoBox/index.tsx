@@ -24,7 +24,7 @@ export const SponsorLogoBox = ({
         src={imageLink}
         alt={altText}
         height={sponsorLogoBox.imageSize}
-        py="5px"
+        py="10px"
         onClick={() => handleClick(websiteLink)}
         cursor={"pointer"}
       />

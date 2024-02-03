@@ -44,6 +44,35 @@ export const SponsorLogoContainer = () => {
           websiteLink="https://liquiddeath.com/en-gb"
         />
       </HStack>
+      <HStack
+        width={sponsorLogoContainer.widthSize}
+        height="full"
+        display={"flex"}
+        justifyContent={"space-between"}
+        wrap={"unset"}
+      >
+        <SponsorLogoBox
+          title="Clear Lase"
+          subtitle="Expert Tattoo Removal"
+          altText="Clear Lase"
+          imageLink="/clearLase.png"
+          websiteLink="https://www.clearlase.co.uk/"
+        />
+        <SponsorLogoBox
+          title="Tattoo Do"
+          subtitle="By Tatooers, For Tattoos"
+          altText="Tatoo Do"
+          imageLink="/tatooDoLogo.png"
+          websiteLink="https://www.tattoodo.com/"
+        />
+        <SponsorLogoBox
+          title="Parliament Merch"
+          subtitle="On Demand Merchandise "
+          altText="Clear Lase"
+          imageLink="/parliment.png"
+          websiteLink="https://parliamentmerch.com/"
+        />
+      </HStack>
     </VStack>
   );
 };
