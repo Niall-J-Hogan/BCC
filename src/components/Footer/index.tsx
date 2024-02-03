@@ -20,7 +20,7 @@ export const Footer = () => {
             Where To Find Us?
           </Text>
           <Text color="white" fontSize={footer.subHeadingSize}>
-            Alma St Sheffield S3 8SA
+            Alma St
           </Text>
           <Text color="white" fontSize={footer.subHeadingSize}>
             Sheffield
