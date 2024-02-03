@@ -51,7 +51,7 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
             </Link>
             <Link
               color={"white"}
-              onClick={() => handleClick("https://forms.gle/nTc8Rg9tX61D5KwP9")}
+              href="/app/artists"
               backgroundColor={"#5B19D2"}
               p="10px"
               border="solid white 2px"
@@ -59,7 +59,7 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
               w="full"
               textAlign={"center"}
             >
-              Artists Application
+              Artists
             </Link>
             <Link
               color={"white"}
@@ -69,9 +69,9 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
               borderRadius={10}
               w="full"
               textAlign={"center"}
-              // onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
+              onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
             >
-              Vendors Application Coming Soon!
+              Vendors Application
             </Link>
             <Link
               color={"white"}

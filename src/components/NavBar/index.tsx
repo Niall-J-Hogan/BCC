@@ -32,20 +32,17 @@ export const NavBar = () => {
         <NavBarLogo />
         <Spacer />
         <HStack spacing={6} display={{ base: "none", md: "flex" }}>
-          <Link fontWeight="semibold" href="/app/homepage">
+          <Link fontWeight="semibold" href="/app/home">
             Home
           </Link>
-          <Link
-            fontWeight="semibold"
-            onClick={() => handleClick("https://forms.gle/nTc8Rg9tX61D5KwP9")}
-          >
-            Artists Application
+          <Link fontWeight="semibold" href="/app/artists">
+            Artists
           </Link>
           <Link
             fontWeight="semibold"
-            // onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
+            onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
           >
-            Vendors Application Coming Soon!
+            Vendors Application
           </Link>
           <Link
             fontWeight="semibold"
