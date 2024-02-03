@@ -78,9 +78,9 @@ export const HeaderGif = ({
               backgroundColor={"#CDAF00"}
               size={"lg"}
               width={headerGif.gifButtonSize}
-              onClick={() => handleClick("https://forms.gle/nTc8Rg9tX61D5KwP9")}
+              onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
             >
-              Artist Application
+              Vendor Application
             </Button>
           )}
         </VStack>
