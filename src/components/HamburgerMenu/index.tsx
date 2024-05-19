@@ -89,6 +89,22 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
             >
               Contact
             </Link>
+            <Link
+              color={"#D2BB34"}
+              backgroundColor={"#5B19D2"}
+              p="10px"
+              border="solid white 2px"
+              borderRadius={10}
+              onClick={() =>
+                handleClick(
+                  "https://www.skiddle.com/whats-on/Sheffield/Kelham-Island-Museum/Seven-Hills-Tattoo-Convention-2024-Sheffield/38180081/"
+                )
+              }
+              w="full"
+              textAlign={"center"}
+            >
+              Buy Tickets
+            </Link>
           </VStack>
         </DrawerBody>
       </DrawerContent>
