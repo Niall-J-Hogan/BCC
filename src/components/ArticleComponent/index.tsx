@@ -1,4 +1,4 @@
-import { HStack, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Heading, Image, Text, VStack } from "@chakra-ui/react";
 
 interface IArticleComponent {
   title: string;
@@ -16,38 +16,37 @@ export const ArticleComponent = ({
   textOrientation = "flex-start",
 }: IArticleComponent) => {
   return (
-    <VStack>
-      <Heading
-        as="h1"
-        size={"2xl"}
-        color="black  "
-        padding={"5px"}
-        fontStyle={"italic"}
-        alignSelf={textOrientation}
-        borderBottom={"solid 2px black"}
-      >
-        {title}
-      </Heading>
-      <HStack marginTop="20px" height="full">
-        {imageOrientation === "flex-start" && (
-          <Image alt="" src={image} max-width={"100%"} width={"auto"} />
-        )}
-        <VStack height="full">
-          <Text
-            as="article"
-            paddingX="40px"
-            lineHeight={"9"}
-            fontWeight={"semibold"}
-            whiteSpace="pre-line"
-          >
-            {articleText}
-          </Text>
-        </VStack>
+    <HStack height="full">
+      {imageOrientation === "flex-start" && (
+        <Image alt="" src={image} max-width={"40%"} width={"40%"} />
+      )}
+      <VStack height="full" spacing={16}>
+        <Heading
+          as="h1"
+          size={"xl"}
+          color="black"
+          padding={"5px"}
+          fontStyle={"italic"}
+          alignSelf={textOrientation}
+          borderBottom={"solid 2px black"}
+        >
+          {title}
+        </Heading>
 
-        {imageOrientation === "flex-end" && (
-          <Image alt="" src={image} max-width={"100%"} width={"auto"} />
-        )}
-      </HStack>
-    </VStack>
+        <Text
+          as="article"
+          paddingX="40px"
+          lineHeight={"9"}
+          fontWeight={"semibold"}
+          whiteSpace="pre-line"
+        >
+          {articleText}
+        </Text>
+      </VStack>
+
+      {imageOrientation === "flex-end" && (
+        <Image alt="" src={image} max-width={"40%"} width={"40%"} />
+      )}
+    </HStack>
   );
 };
