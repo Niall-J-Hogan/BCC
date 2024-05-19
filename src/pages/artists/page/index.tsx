@@ -1,4 +1,4 @@
-import { Heading, VStack, Text, HStack } from "@chakra-ui/react";
+import { Heading, VStack, Image, HStack, Text } from "@chakra-ui/react";
 
 import { Footer } from "@/components/Footer";
 import { HeaderGif } from "@/components/HeaderGif";
@@ -7,6 +7,7 @@ import { SponsorLogoContainer } from "@/components/SponsorLogoContainer";
 import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
 import { copy } from "../data";
+import { ArtistBoxComponent } from "@/components/ArtistBoxComponent";
 
 export const ArtistPage = () => {
   const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
@@ -37,7 +38,83 @@ export const ArtistPage = () => {
         >
           Artists
         </Heading>
-        <HStack width={isMobile || isIpad || isIpadHorizontal ? "100%" : "70%"}>
+
+        <HStack
+          display={"flex"}
+          w="auto"
+          h="full"
+          justifyContent={"flex-start"}
+          flexWrap={"wrap"}
+        >
+          <ArtistBoxComponent
+            artistName="Nick Mayes"
+            imageLink="/artists/NickMayes.jpg"
+            city="Scarborough, UK"
+            shopName="North Sea Tattoo"
+          />
+          <ArtistBoxComponent
+            artistName="Nick Mayes"
+            imageLink="/artists/NickMayes.jpg"
+            city="Scarborough, UK"
+            shopName="North Sea Tattoo"
+          />{" "}
+          <ArtistBoxComponent
+            artistName="Nick Mayes"
+            imageLink="/artists/NickMayes.jpg"
+            city="Scarborough, UK"
+            shopName="North Sea Tattoo"
+          />{" "}
+          <ArtistBoxComponent
+            artistName="Nick Mayes"
+            imageLink="/artists/NickMayes.jpg"
+            city="Scarborough, UK"
+            shopName="North Sea Tattoo"
+          />{" "}
+          <ArtistBoxComponent
+            artistName="Nick Mayes"
+            imageLink="/artists/NickMayes.jpg"
+            city="Scarborough, UK"
+            shopName="North Sea Tattoo"
+          />{" "}
+          <ArtistBoxComponent
+            artistName="Nick Mayes"
+            imageLink="/artists/NickMayes.jpg"
+            city="Scarborough, UK"
+            shopName="North Sea Tattoo"
+          />{" "}
+          <ArtistBoxComponent
+            artistName="Nick Mayes"
+            imageLink="/artists/NickMayes.jpg"
+            city="Scarborough, UK"
+            shopName="North Sea Tattoo"
+          />{" "}
+          <ArtistBoxComponent
+            artistName="Nick Mayes"
+            imageLink="/artists/NickMayes.jpg"
+            city="Scarborough, UK"
+            shopName="North Sea Tattoo"
+          />{" "}
+          <ArtistBoxComponent
+            artistName="Nick Mayes"
+            imageLink="/artists/NickMayes.jpg"
+            city="Scarborough, UK"
+            shopName="North Sea Tattoo"
+          />{" "}
+          <ArtistBoxComponent
+            artistName="Nick Mayes"
+            imageLink="/artists/NickMayes.jpg"
+            city="Scarborough, UK"
+            shopName="North Sea Tattoo"
+          />{" "}
+          <ArtistBoxComponent
+            artistName="Nick Mayes"
+            imageLink="/artists/NickMayes.jpg"
+            city="Scarborough, UK"
+            shopName="North Sea Tattoo"
+          />
+        </HStack>
+
+        {/* <HStack width={isMobile || isIpad || isIpadHorizontal ? "100%" : "70%"}>
           {isMobile || isIpad || isIpadHorizontal ? (
             <Text
               as="article"
@@ -86,7 +163,7 @@ export const ArtistPage = () => {
           >
             FULL ARTIST LIST COMING SOON!
           </Heading>
-        )}
+        )} */}
       </VStack>
       <SponsorLogoContainer />
 
