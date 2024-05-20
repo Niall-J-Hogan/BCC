@@ -1,4 +1,4 @@
-import { Heading, VStack, Text, HStack } from "@chakra-ui/react";
+import { Heading, VStack, Image, HStack, Text } from "@chakra-ui/react";
 
 import { Footer } from "@/components/Footer";
 import { HeaderGif } from "@/components/HeaderGif";
@@ -6,7 +6,8 @@ import { NavBar } from "@/components/NavBar";
 import { SponsorLogoContainer } from "@/components/SponsorLogoContainer";
 import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
-import { copy } from "../data";
+import { ARTIST_DATA, copy } from "../data";
+import { ArtistBoxComponent } from "@/components/ArtistBoxComponent";
 
 export const ArtistPage = () => {
   const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
@@ -25,7 +26,7 @@ export const ArtistPage = () => {
         isButton={true}
       />
 
-      <VStack height="auto" width="80%" paddingY={"50px"} gap={10}>
+      <VStack height="auto" width="full" paddingY={"50px"} gap={10}>
         <Heading
           as="h1"
           size={"2xl"}
@@ -37,7 +38,31 @@ export const ArtistPage = () => {
         >
           Artists
         </Heading>
-        <HStack width={isMobile || isIpad || isIpadHorizontal ? "100%" : "70%"}>
+
+        {/* <HStack
+          display={"flex"}
+          w="80%"
+          h="full"
+          justifyContent={"space-evenly"}
+          alignItems=""
+          flexWrap={"wrap"}
+        >
+          {!!ARTIST_DATA &&
+            ARTIST_DATA.map((item) => (
+              <ArtistBoxComponent
+                key={item.instaHandle}
+                artistName={item.artistName}
+                imageLink="/artists/NickMayes.jpg"
+                // imageLink={`/artists/${item.artistName.replace(
+                //   /\s+/g,
+                //   ""
+                // )}.jpg`} // Construct the image link dynamically
+                instaHandle={item.instaHandle}
+              />
+            ))}
+        </HStack> */}
+
+        <HStack width={isMobile || isIpad || isIpadHorizontal ? "90%" : "70%"}>
           {isMobile || isIpad || isIpadHorizontal ? (
             <Text
               as="article"
