@@ -6,7 +6,7 @@ import { NavBar } from "@/components/NavBar";
 import { SponsorLogoContainer } from "@/components/SponsorLogoContainer";
 import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
-import { copy } from "../data";
+import { ARTIST_DATA, copy } from "../data";
 import { ArtistBoxComponent } from "@/components/ArtistBoxComponent";
 
 export const ArtistPage = () => {
@@ -26,7 +26,7 @@ export const ArtistPage = () => {
         isButton={true}
       />
 
-      <VStack height="auto" width="80%" paddingY={"50px"} gap={10}>
+      <VStack height="auto" width="full" paddingY={"50px"} gap={10}>
         <Heading
           as="h1"
           size={"2xl"}
@@ -39,82 +39,30 @@ export const ArtistPage = () => {
           Artists
         </Heading>
 
-        <HStack
+        {/* <HStack
           display={"flex"}
-          w="auto"
+          w="80%"
           h="full"
-          justifyContent={"flex-start"}
+          justifyContent={"space-evenly"}
+          alignItems=""
           flexWrap={"wrap"}
         >
-          <ArtistBoxComponent
-            artistName="Nick Mayes"
-            imageLink="/artists/NickMayes.jpg"
-            city="Scarborough, UK"
-            shopName="North Sea Tattoo"
-          />
-          <ArtistBoxComponent
-            artistName="Nick Mayes"
-            imageLink="/artists/NickMayes.jpg"
-            city="Scarborough, UK"
-            shopName="North Sea Tattoo"
-          />{" "}
-          <ArtistBoxComponent
-            artistName="Nick Mayes"
-            imageLink="/artists/NickMayes.jpg"
-            city="Scarborough, UK"
-            shopName="North Sea Tattoo"
-          />{" "}
-          <ArtistBoxComponent
-            artistName="Nick Mayes"
-            imageLink="/artists/NickMayes.jpg"
-            city="Scarborough, UK"
-            shopName="North Sea Tattoo"
-          />{" "}
-          <ArtistBoxComponent
-            artistName="Nick Mayes"
-            imageLink="/artists/NickMayes.jpg"
-            city="Scarborough, UK"
-            shopName="North Sea Tattoo"
-          />{" "}
-          <ArtistBoxComponent
-            artistName="Nick Mayes"
-            imageLink="/artists/NickMayes.jpg"
-            city="Scarborough, UK"
-            shopName="North Sea Tattoo"
-          />{" "}
-          <ArtistBoxComponent
-            artistName="Nick Mayes"
-            imageLink="/artists/NickMayes.jpg"
-            city="Scarborough, UK"
-            shopName="North Sea Tattoo"
-          />{" "}
-          <ArtistBoxComponent
-            artistName="Nick Mayes"
-            imageLink="/artists/NickMayes.jpg"
-            city="Scarborough, UK"
-            shopName="North Sea Tattoo"
-          />{" "}
-          <ArtistBoxComponent
-            artistName="Nick Mayes"
-            imageLink="/artists/NickMayes.jpg"
-            city="Scarborough, UK"
-            shopName="North Sea Tattoo"
-          />{" "}
-          <ArtistBoxComponent
-            artistName="Nick Mayes"
-            imageLink="/artists/NickMayes.jpg"
-            city="Scarborough, UK"
-            shopName="North Sea Tattoo"
-          />{" "}
-          <ArtistBoxComponent
-            artistName="Nick Mayes"
-            imageLink="/artists/NickMayes.jpg"
-            city="Scarborough, UK"
-            shopName="North Sea Tattoo"
-          />
-        </HStack>
+          {!!ARTIST_DATA &&
+            ARTIST_DATA.map((item) => (
+              <ArtistBoxComponent
+                key={item.instaHandle}
+                artistName={item.artistName}
+                imageLink="/artists/NickMayes.jpg"
+                // imageLink={`/artists/${item.artistName.replace(
+                //   /\s+/g,
+                //   ""
+                // )}.jpg`} // Construct the image link dynamically
+                instaHandle={item.instaHandle}
+              />
+            ))}
+        </HStack> */}
 
-        {/* <HStack width={isMobile || isIpad || isIpadHorizontal ? "100%" : "70%"}>
+        <HStack width={isMobile || isIpad || isIpadHorizontal ? "90%" : "70%"}>
           {isMobile || isIpad || isIpadHorizontal ? (
             <Text
               as="article"
@@ -163,7 +111,7 @@ export const ArtistPage = () => {
           >
             FULL ARTIST LIST COMING SOON!
           </Heading>
-        )} */}
+        )}
       </VStack>
       <SponsorLogoContainer />
 
