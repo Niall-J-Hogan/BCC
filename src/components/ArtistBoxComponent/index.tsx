@@ -5,15 +5,15 @@ import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 interface IArtistBoxComponent {
   imageLink: string;
   artistName: string;
-  city: string;
-  shopName: string;
+  city?: string;
+  instaHandle: string;
 }
 
 export const ArtistBoxComponent = ({
   artistName,
   city,
   imageLink,
-  shopName,
+  instaHandle,
 }: IArtistBoxComponent) => {
   const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
 
@@ -36,7 +36,7 @@ export const ArtistBoxComponent = ({
         {artistName}
       </Text>
       <Text fontSize={"lg"}>{city}</Text>
-      <Text fontSize={"lg"}>{shopName}</Text>
+      <Text fontSize={"lg"}>{instaHandle}</Text>
     </VStack>
   );
 };
