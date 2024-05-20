@@ -39,7 +39,7 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
           <VStack spacing={6} p="0px" align="flex-end" w="full">
             <Link
               color={"white"}
-              href="/app/homepage"
+              href="/app/home"
               backgroundColor={"#5B19D2"}
               p="10px"
               border="solid white 2px"
