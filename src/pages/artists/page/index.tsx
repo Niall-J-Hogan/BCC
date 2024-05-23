@@ -39,7 +39,7 @@ export const ArtistPage = () => {
           Artists
         </Heading>
 
-        {/* <HStack
+        <HStack
           display={"flex"}
           w="80%"
           h="full"
@@ -52,66 +52,14 @@ export const ArtistPage = () => {
               <ArtistBoxComponent
                 key={item.instaHandle}
                 artistName={item.artistName}
-                imageLink="/artists/NickMayes.jpg"
-                // imageLink={`/artists/${item.artistName.replace(
-                //   /\s+/g,
-                //   ""
-                // )}.jpg`} // Construct the image link dynamically
+                imageLink={`/artists/${item.artistName.replace(
+                  /\s+/g,
+                  ""
+                )}.jpeg`}
                 instaHandle={item.instaHandle}
               />
             ))}
-        </HStack> */}
-
-        <HStack width={isMobile || isIpad || isIpadHorizontal ? "90%" : "70%"}>
-          {isMobile || isIpad || isIpadHorizontal ? (
-            <Text
-              as="article"
-              lineHeight={"9"}
-              fontWeight={"semibold"}
-              whiteSpace="pre-line"
-              py="10px"
-              textAlign={"center"}
-            >
-              {copy}
-            </Text>
-          ) : (
-            <Text
-              as="article"
-              paddingX="40px"
-              lineHeight={"9"}
-              fontWeight={"semibold"}
-              whiteSpace="pre-line"
-              align={"center"}
-            >
-              {copy}
-            </Text>
-          )}
         </HStack>
-
-        {isMobile || isIpad || isIpadHorizontal ? (
-          <Heading
-            as="h2"
-            size={sponsorLogoContainer.headingSize}
-            color="White"
-            fontStyle={"italic"}
-            backgroundColor={"red"}
-            padding="10px"
-          >
-            ARTIST LIST COMING SOON!
-          </Heading>
-        ) : (
-          <Heading
-            as="h2"
-            size={sponsorLogoContainer.headingSize}
-            color="White"
-            fontStyle={"italic"}
-            backgroundColor={"red"}
-            padding="20px"
-            px="300px"
-          >
-            FULL ARTIST LIST COMING SOON!
-          </Heading>
-        )}
       </VStack>
       <SponsorLogoContainer />
 
