@@ -1,4 +1,4 @@
-import { VStack } from "@chakra-ui/react";
+import { Heading, VStack } from "@chakra-ui/react";
 
 import { ArticleComponent } from "@/components/ArticleComponent";
 import { Footer } from "@/components/Footer";
@@ -9,9 +9,12 @@ import { SponsorLogoContainer } from "@/components/SponsorLogoContainer";
 import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 import { byTattoers, theVendors, theVenue, whenIsIt } from "../data/copy";
 import Head from "next/head";
+import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
 
 export const LandingPage = () => {
   const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
+  const { sponsorLogoContainer } = UseGetSizeForDevices();
+
   return (
     <VStack spacing={0} backgroundColor={"#E4FDE1"}>
       <Head>
@@ -33,6 +36,30 @@ export const LandingPage = () => {
       />
 
       <VStack height="auto" width="80%" paddingY={"50px"} gap={10}>
+        {isMobile || isIpad || isIpadHorizontal ? (
+          <Heading
+            as="h2"
+            size={sponsorLogoContainer.headingSize}
+            color="White"
+            fontStyle={"italic"}
+            backgroundColor={"red"}
+            padding="10px"
+          >
+            Artist List Announced!
+          </Heading>
+        ) : (
+          <Heading
+            as="h2"
+            size={sponsorLogoContainer.headingSize}
+            color="White"
+            fontStyle={"italic"}
+            backgroundColor={"red"}
+            padding="20px"
+            px="300px"
+          >
+            Artist List Announced!
+          </Heading>
+        )}
         {isMobile || isIpad || isIpadHorizontal ? (
           <MobileArticleComponent
             title="By Tattooers. For The People Of Sheffield"
