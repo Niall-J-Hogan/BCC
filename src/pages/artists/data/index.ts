@@ -4,270 +4,270 @@ export const copy =
 export const ARTIST_DATA = [
   {
     artistName: "Gem Carter",
-    instaHandle: "@gemcartertattoo",
+    instaHandle: "gemcartertattoo",
   },
   {
     artistName: "Will Geary",
-    instaHandle: "@will_geary",
+    instaHandle: "will_geary",
   },
   {
     artistName: "Gabriel Ribeiro",
-    instaHandle: "@gabrielxtattoo",
+    instaHandle: "gabrielxtattoo",
   },
   {
     artistName: "Little Rach",
-    instaHandle: "@littlerachtattoo",
+    instaHandle: "littlerachtattoo",
   },
   {
     artistName: "Chloe White",
-    instaHandle: "@chloewhite.tattoo",
+    instaHandle: "chloewhite.tattoo",
   },
   {
     artistName: "BLST Custom",
-    instaHandle: "@blstcustom",
+    instaHandle: "blstcustom",
   },
   {
     artistName: "Aiden Knowles",
-    instaHandle: "@aidenknowlestatt",
+    instaHandle: "aidenknowlestatt",
   },
   {
     artistName: "Sarah Terry",
-    instaHandle: "@guerilla_needles",
+    instaHandle: "guerilla_needles",
   },
   {
     artistName: "Dickie Williams",
-    instaHandle: "@dickie_williams",
+    instaHandle: "dickie_williams",
   },
   {
     artistName: "Finn Guthrie",
-    instaHandle: "@tattoo_finn",
+    instaHandle: "tattoo_finn",
   },
   {
     artistName: "Grant Morris",
-    instaHandle: "@grantegrity",
+    instaHandle: "grantegrity",
   },
   {
     artistName: "Martin Kirke",
-    instaHandle: "@kirkytattooer",
+    instaHandle: "kirkytattooer",
   },
   {
     artistName: "Rhi Settle",
-    instaHandle: "@rhi.draws",
+    instaHandle: "rhi.draws",
   },
   {
     artistName: "Steve Upton",
-    instaHandle: "@steveupton_tattoo",
+    instaHandle: "steveupton_tattoo",
   },
   {
     artistName: "Aaron Breeze",
-    instaHandle: "@breezetattoo",
+    instaHandle: "breezetattoo",
   },
   {
     artistName: "Konkas",
-    instaHandle: "@konkas",
+    instaHandle: "konkas",
   },
   {
     artistName: "Poppy Moon",
-    instaHandle: "@thepoppymoon",
+    instaHandle: "thepoppymoon",
   },
   {
     artistName: "Jordan Gibb",
-    instaHandle: "@jordangibbtattoo",
+    instaHandle: "jordangibbtattoo",
   },
   {
     artistName: "Lewis Turner",
-    instaHandle: "@lewyttattooer",
+    instaHandle: "lewyttattooer",
   },
   {
     artistName: "Lady Darryl",
-    instaHandle: "@ladydarryl",
+    instaHandle: "ladydarryl",
   },
   {
     artistName: "David Barry",
-    instaHandle: "@David Barry",
+    instaHandle: "David Barry",
   },
   {
     artistName: "SJ Young",
-    instaHandle: "@tattoosbysjyoung",
+    instaHandle: "tattoosbysjyoung",
   },
   {
     artistName: "Tore Pierce",
-    instaHandle: "@Toretattoos",
+    instaHandle: "Toretattoos",
   },
   {
     artistName: "Marcus Dean",
-    instaHandle: "@tat2dean",
+    instaHandle: "tat2dean",
   },
   {
     artistName: "Holly Ashby",
-    instaHandle: "@hollyashbytattoo",
+    instaHandle: "hollyashbytattoo",
   },
   {
     artistName: "Harry Peace",
-    instaHandle: "@harrypeacetattoo",
+    instaHandle: "harrypeacetattoo",
   },
   {
     artistName: "Dan Allen",
-    instaHandle: "@danallentattoo",
+    instaHandle: "danallentattoo",
   },
   {
     artistName: "Sammy Harding",
-    instaHandle: "@sammy__harding",
+    instaHandle: "sammy__harding",
   },
   {
     artistName: "George Geary",
-    instaHandle: "@george_geary",
+    instaHandle: "george_geary",
   },
   {
-    artistName: "Catherine Murray",
-    instaHandle: "@katemurraytattoo",
+    artistName: "Katherine Murray",
+    instaHandle: "katemurraytattoo",
   },
   {
     artistName: "Daryl Watson",
-    instaHandle: "@darylwatsontattoo",
+    instaHandle: "darylwatsontattoo",
   },
   {
     artistName: "Michael Cooper",
-    instaHandle: "@yallerybrowntattoo",
+    instaHandle: "yallerybrowntattoo",
   },
   {
     artistName: "Brad Edwards",
-    instaHandle: "@brad_edward",
+    instaHandle: "brad_edward",
   },
   {
     artistName: "Ashbury Levi",
-    instaHandle: "@ashbury_levi",
+    instaHandle: "ashbury_levi",
   },
   {
     artistName: "Chay Heyden",
-    instaHandle: "@chayheyden",
+    instaHandle: "chayheyden",
   },
   {
     artistName: "Abi Tonge",
-    instaHandle: "@art.tattoos",
+    instaHandle: "art.tattoos",
   },
   {
     artistName: "Jimmy Wizard",
-    instaHandle: "@jimmyxwizard",
+    instaHandle: "jimmyxwizard",
   },
   {
     artistName: "Laura Beatrice",
-    instaHandle: "@laurabeatricetattoo",
+    instaHandle: "laurabeatricetattoo",
   },
   {
     artistName: "Cormac Mcnealy",
-    instaHandle: "@cormacmcnealy",
+    instaHandle: "cormacmcnealy",
   },
   {
     artistName: "Harry Rogers",
-    instaHandle: "@hkr.tattoo",
+    instaHandle: "hkr.tattoo",
   },
   {
     artistName: "Ben Roberts",
-    instaHandle: "@benrobertstattoo",
+    instaHandle: "benrobertstattoo",
   },
   {
     artistName: "Dyl",
-    instaHandle: "@dyltattoo_",
+    instaHandle: "dyltattoo_",
   },
   {
     artistName: "Tacho Franch",
-    instaHandle: "@tachofranch",
+    instaHandle: "tachofranch",
   },
   {
     artistName: "Freya Dawn",
-    instaHandle: "@freyadawntattoo",
+    instaHandle: "freyadawntattoo",
   },
   {
     artistName: "Darell Tallent",
-    instaHandle: "@darell_tallent_tattoo",
+    instaHandle: "darell_tallent_tattoo",
   },
   {
     artistName: "Spike5ftsix",
-    instaHandle: "@brutaltruthtattooclub",
+    instaHandle: "brutaltruthtattooclub",
   },
   {
     artistName: "Daniel Williams",
-    instaHandle: "@costadan",
+    instaHandle: "costadan",
   },
   {
     artistName: "Aaron James",
-    instaHandle: "@aaronjamestattoo",
+    instaHandle: "aaronjamestattoo",
   },
   {
     artistName: "Chris Newport",
-    instaHandle: "@chrisnewport.tattoo",
+    instaHandle: "chrisnewport.tattoo",
   },
   {
     artistName: "Tom Wootton",
-    instaHandle: "@t_j_wootton",
+    instaHandle: "t_j_wootton",
   },
   {
     artistName: "Alex Heath",
-    instaHandle: "@alexheathtattoo",
+    instaHandle: "alexheathtattoo",
   },
   {
     artistName: "Joshua Beatson",
-    instaHandle: "@joshuabeatsontattoo",
+    instaHandle: "joshuabeatsontattoo",
   },
   {
     artistName: "Simon Erl",
-    instaHandle: "@simonerl",
+    instaHandle: "simonerl",
   },
   {
     artistName: "Elle Donlon",
-    instaHandle: "@elledonlon_tattoo",
+    instaHandle: "elledonlon_tattoo",
   },
   {
     artistName: "Kendel Nicholson",
-    instaHandle: "@kendelnicholsontattoo",
+    instaHandle: "kendelnicholsontattoo",
   },
   {
     artistName: "Andy Morrell",
-    instaHandle: "@andymorrelltattoo",
+    instaHandle: "andymorrelltattoo",
   },
   {
     artistName: "Willie",
-    instaHandle: "@williestattoo",
+    instaHandle: "williestattoo",
   },
   {
     artistName: "Megan Fell",
-    instaHandle: "@meganfelltattoo",
+    instaHandle: "meganfelltattoo",
   },
   {
     artistName: "Shaun Hubbard",
-    instaHandle: "@shaunhubbardtattoo",
+    instaHandle: "shaunhubbardtattoo",
   },
   {
     artistName: "Megan May",
-    instaHandle: "@meganmaytattoo",
+    instaHandle: "meganmaytattoo",
   },
   {
     artistName: "John S Philip",
-    instaHandle: "@john.s.philip",
+    instaHandle: "john.s.philip",
   },
   {
     artistName: "Pietro Still",
-    instaHandle: "@pietro_still_tattoo",
+    instaHandle: "pietro_still_tattoo",
   },
   {
-    artistName: "Manga",
-    instaHandle: "@elmongasasturain",
+    artistName: "Monga",
+    instaHandle: "elmongasasturain",
   },
   {
     artistName: "Chloe Black",
-    instaHandle: "@chloeblacktattoos",
+    instaHandle: "chloeblacktattoos",
   },
   {
     artistName: "Foxblood",
-    instaHandle: "@foxblood",
+    instaHandle: "foxblood",
   },
   {
     artistName: "Ellie Williams",
-    instaHandle: "@ewilliamstattoo",
+    instaHandle: "ewilliamstattoo",
   },
   {
     artistName: "Nick Mayes",
-    instaHandle: "@nickmayes",
+    instaHandle: "nickmayes",
   },
 ];
