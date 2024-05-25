@@ -1,5 +1,4 @@
-import { Heading, VStack } from "@chakra-ui/react";
-
+import { Heading, Link, VStack } from "@chakra-ui/react";
 import { ArticleComponent } from "@/components/ArticleComponent";
 import { Footer } from "@/components/Footer";
 import { HeaderGif } from "@/components/HeaderGif";
@@ -7,9 +6,9 @@ import { MobileArticleComponent } from "@/components/MobileArticleComponent";
 import { NavBar } from "@/components/NavBar";
 import { SponsorLogoContainer } from "@/components/SponsorLogoContainer";
 import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
-import { byTattoers, theVendors, theVenue, whenIsIt } from "../data/copy";
-import Head from "next/head";
 import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
+import Head from "next/head";
+import { byTattoers, theVendors, theVenue, whenIsIt } from "../data/copy";
 
 export const LandingPage = () => {
   const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
@@ -42,10 +41,10 @@ export const LandingPage = () => {
             size={sponsorLogoContainer.headingSize}
             color="White"
             fontStyle={"italic"}
-            backgroundColor={"red"}
-            padding="10px"
           >
-            Artist List Announced!
+            <Link href="/app/artists" backgroundColor={"red"} padding="10px">
+              Artist List Announced!
+            </Link>
           </Heading>
         ) : (
           <Heading
@@ -53,11 +52,16 @@ export const LandingPage = () => {
             size={sponsorLogoContainer.headingSize}
             color="White"
             fontStyle={"italic"}
-            backgroundColor={"red"}
-            padding="20px"
             px="300px"
           >
-            Artist List Announced!
+            <Link
+              href="/app/artists"
+              backgroundColor={"red"}
+              padding="10px"
+              width="300px"
+            >
+              Artist List Announced!
+            </Link>
           </Heading>
         )}
         {isMobile || isIpad || isIpadHorizontal ? (

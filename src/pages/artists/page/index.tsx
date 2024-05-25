@@ -1,18 +1,13 @@
-import { Heading, VStack, Image, HStack, Text } from "@chakra-ui/react";
+import { HStack, Heading, VStack } from "@chakra-ui/react";
 
+import { ArtistBoxComponent } from "@/components/ArtistBoxComponent";
 import { Footer } from "@/components/Footer";
 import { HeaderGif } from "@/components/HeaderGif";
 import { NavBar } from "@/components/NavBar";
 import { SponsorLogoContainer } from "@/components/SponsorLogoContainer";
-import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
-import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
-import { ARTIST_DATA, copy } from "../data";
-import { ArtistBoxComponent } from "@/components/ArtistBoxComponent";
+import { ARTIST_DATA } from "../data";
 
 export const ArtistPage = () => {
-  const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
-  const { sponsorLogoContainer } = UseGetSizeForDevices();
-
   return (
     <VStack spacing={0} backgroundColor={"#E4FDE1"}>
       <VStack w="full" h="full">
