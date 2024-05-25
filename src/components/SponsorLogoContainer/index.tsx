@@ -60,7 +60,7 @@ export const SponsorLogoContainer = () => {
         />
         <SponsorLogoBox
           title="Tattoo Do"
-          subtitle="By Tatooers, For Tattoos"
+          subtitle="By Tattooers, For Tattoos"
           altText="Tatoo Do"
           imageLink="/tatooDoLogo.png"
           websiteLink="https://www.tattoodo.com/"
