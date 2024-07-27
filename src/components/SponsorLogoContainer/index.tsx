@@ -1,8 +1,10 @@
 import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
 import { HStack, Heading, VStack } from "@chakra-ui/react";
 import { SponsorLogoBox } from "../SponsorLogoBox/index";
+import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 export const SponsorLogoContainer = () => {
   const { sponsorLogoContainer } = UseGetSizeForDevices();
+  const { isMobile } = UseGetIsDevice();
 
   return (
     <VStack width={"full"} marginBottom={"50px"}>
@@ -43,14 +45,14 @@ export const SponsorLogoContainer = () => {
           imageLink="/LDlogo.png"
           websiteLink="https://liquiddeath.com/en-gb"
         />
-      </HStack>
+        {/* {     </HStack>
       <HStack
         width={sponsorLogoContainer.widthSize}
         height="full"
         display={"flex"}
         justifyContent={"space-between"}
         wrap={"unset"}
-      >
+      >} */}
         <SponsorLogoBox
           title="Clear Lase"
           subtitle="Expert Tattoo Removal"
@@ -58,13 +60,7 @@ export const SponsorLogoContainer = () => {
           imageLink="/clearLase.png"
           websiteLink="https://www.clearlase.co.uk/"
         />
-        <SponsorLogoBox
-          title="Tattoo Do"
-          subtitle="By Tattooers, For Tattoos"
-          altText="Tatoo Do"
-          imageLink="/tatooDoLogo.png"
-          websiteLink="https://www.tattoodo.com/"
-        />
+
         <SponsorLogoBox
           title="Parliament Merch"
           subtitle="On Demand Merchandise "
