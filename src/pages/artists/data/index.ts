@@ -20,7 +20,7 @@ export const ARTIST_DATA = [
   },
   {
     artistName: "Chloe White",
-    instaHandle: "chloewhite.tattoo",
+    instaHandle: "chloewhite.tattooer",
   },
   {
     artistName: "BLST Custom",
@@ -28,7 +28,7 @@ export const ARTIST_DATA = [
   },
   {
     artistName: "Aiden Knowles",
-    instaHandle: "aidenknowlestatt",
+    instaHandle: "aidenknowlestattoo",
   },
   {
     artistName: "Sarah Terry",
@@ -84,7 +84,7 @@ export const ARTIST_DATA = [
   },
   {
     artistName: "David Barry",
-    instaHandle: "David Barry",
+    instaHandle: "davidbarrytattoo",
   },
   {
     artistName: "SJ Young",
@@ -96,7 +96,7 @@ export const ARTIST_DATA = [
   },
   {
     artistName: "Marcus Dean",
-    instaHandle: "tat2dean",
+    instaHandle: "tat2deans",
   },
   {
     artistName: "Holly Ashby",
@@ -132,7 +132,7 @@ export const ARTIST_DATA = [
   },
   {
     artistName: "Brad Edwards",
-    instaHandle: "brad_edward",
+    instaHandle: "brad_edwards",
   },
   {
     artistName: "Ashbury Levi",
@@ -164,7 +164,7 @@ export const ARTIST_DATA = [
   },
   {
     artistName: "Ben Roberts",
-    instaHandle: "benrobertstattoo",
+    instaHandle: "benrobertstattoos",
   },
   {
     artistName: "Dyl",
@@ -228,7 +228,7 @@ export const ARTIST_DATA = [
   },
   {
     artistName: "Willie",
-    instaHandle: "williestattoo",
+    instaHandle: "williestattoos",
   },
   {
     artistName: "Megan Fell",
@@ -252,7 +252,7 @@ export const ARTIST_DATA = [
   },
   {
     artistName: "Monga",
-    instaHandle: "elmongasasturain",
+    instaHandle: "elmongasasturaintattooing",
   },
   {
     artistName: "Chloe Black",
@@ -264,7 +264,7 @@ export const ARTIST_DATA = [
   },
   {
     artistName: "Ellie Williams",
-    instaHandle: "ewilliamstattoo",
+    instaHandle: "ewilliamstattoos",
   },
   {
     artistName: "Nick Mayes",
