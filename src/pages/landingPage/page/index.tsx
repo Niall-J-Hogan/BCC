@@ -29,13 +29,13 @@ export const LandingPage = () => {
 
       <HeaderGif
         title={"Seven Hills Tattoo Convention"}
-        subtitle={"31/08/2024 - 01/09/2024"}
+        subtitle={"30/08/2025 - 31/08/2025"}
         tagline="Kelham Island Museum"
         isButton={true}
       />
 
       <VStack height="auto" width="80%" paddingY={"50px"} gap={10}>
-        {isMobile || isIpad || isIpadHorizontal ? (
+        {/* {isMobile || isIpad || isIpadHorizontal ? (
           <Heading
             as="h2"
             size={sponsorLogoContainer.headingSize}
@@ -63,7 +63,7 @@ export const LandingPage = () => {
               Artist List Announced!
             </Link>
           </Heading>
-        )}
+        )} */}
         {isMobile || isIpad || isIpadHorizontal ? (
           <MobileArticleComponent
             title="By Tattooers. For The People Of Sheffield"
