@@ -36,14 +36,18 @@ export const NavBar = () => {
             Home
           </Link>
 
-          <Link fontWeight="semibold" href="/app/artists">
+          <Link
+            fontWeight="semibold"
+            // onClick={() => handleClick("https://forms.gle/fi4GdsigSCcKn23S9")}
+            href="/app/artists"
+          >
             Artists
           </Link>
           <Link
             fontWeight="semibold"
-            onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
+            // onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
           >
-            Vendors Application
+            Vendors Application (Coming Soon)
           </Link>
           <Link
             fontWeight="semibold"
@@ -64,7 +68,7 @@ export const NavBar = () => {
               )
             }
           >
-            Buy Tickets
+            Buy Tickets (Coming Soon)
           </Link>
           <Link fontWeight="semibold">
             <SlSocialInstagram
