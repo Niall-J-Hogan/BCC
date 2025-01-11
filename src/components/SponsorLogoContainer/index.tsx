@@ -10,13 +10,14 @@ export const SponsorLogoContainer = () => {
     <VStack width={"full"} marginBottom={"50px"}>
       <Heading
         as="h2"
+        fontSize={"28px"}
         size={sponsorLogoContainer.headingSize}
         color="White "
         fontStyle={"italic"}
         backgroundColor={"#4900CD"}
         padding="5px"
       >
-        Proudly Supported By
+        Proudly Supported By...
       </Heading>
       <HStack
         width={sponsorLogoContainer.widthSize}
