@@ -26,9 +26,7 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
       <DrawerOverlay />
       <DrawerContent
         backgroundColor={"transparent"}
-        //backgroundColor={"#979BFF"}
         opacity={1}
-        // borderRadius={"10px"}
         marginLeft={"auto"}
         py="10px"
       >
@@ -52,6 +50,7 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
             <Link
               color={"white"}
               href="/app/artists"
+              // onClick={() => handleClick("https://forms.gle/fi4GdsigSCcKn23S9")}
               backgroundColor={"#5B19D2"}
               p="10px"
               border="solid white 2px"
@@ -69,9 +68,9 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
               borderRadius={10}
               w="full"
               textAlign={"center"}
-              onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
+              // onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
             >
-              Vendors Application
+              Vendors Application (Coming Soon)
             </Link>
             <Link
               color={"white"}
@@ -95,15 +94,15 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
               p="10px"
               border="solid white 2px"
               borderRadius={10}
-              onClick={() =>
-                handleClick(
-                  "https://www.skiddle.com/whats-on/Sheffield/Kelham-Island-Museum/Seven-Hills-Tattoo-Convention-2024-Sheffield/38180081/"
-                )
-              }
+              // onClick={() =>
+              //   handleClick(
+              //     "https://www.skiddle.com/whats-on/Sheffield/Kelham-Island-Museum/Seven-Hills-Tattoo-Convention-2024-Sheffield/38180081/"
+              //   )
+              // }
               w="full"
               textAlign={"center"}
             >
-              Buy Tickets
+              Buy Tickets (Coming Soon)
             </Link>
           </VStack>
         </DrawerBody>

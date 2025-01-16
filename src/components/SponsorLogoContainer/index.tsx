@@ -5,18 +5,19 @@ import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 export const SponsorLogoContainer = () => {
   const { sponsorLogoContainer } = UseGetSizeForDevices();
   const { isMobile } = UseGetIsDevice();
-
+  const textSize = isMobile ? "18px" : "28px";
   return (
     <VStack width={"full"} marginBottom={"50px"}>
       <Heading
         as="h2"
+        fontSize={textSize}
         size={sponsorLogoContainer.headingSize}
         color="White "
         fontStyle={"italic"}
         backgroundColor={"#4900CD"}
         padding="5px"
       >
-        Proudly Supported By
+        Proudly Supported By...
       </Heading>
       <HStack
         width={sponsorLogoContainer.widthSize}
@@ -31,13 +32,13 @@ export const SponsorLogoContainer = () => {
           imageLink="/barberLogo.png"
           websiteLink="https://www.barberdts.com/uk/"
         />
-        <SponsorLogoBox
+        {/* <SponsorLogoBox
           title="OG Supply"
           subtitle="Tattoo Machines and Supplies"
           altText="OG Tattoo Supply"
           imageLink="/ogLogo.png"
           websiteLink="https://www.ogtattoosupply.com/"
-        />
+        /> */}
         <SponsorLogoBox
           title="Liquid Death"
           subtitle="Eco-friendly Water"

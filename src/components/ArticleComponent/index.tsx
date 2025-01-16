@@ -15,12 +15,14 @@ export const ArticleComponent = ({
   imageOrientation = "flex-start",
   textOrientation = "flex-start",
 }: IArticleComponent) => {
+  const textPadding = textOrientation === "flex-end" ? "50px" : "";
+  const textPadding2 = textOrientation === "flex-start" ? "50px" : "";
   return (
     <HStack height="full">
       {imageOrientation === "flex-start" && (
         <Image alt="" src={image} max-width={"40%"} width={"40%"} />
       )}
-      <VStack height="full" spacing={16}>
+      <VStack height="full" spacing={16} width="80%">
         <Heading
           as="h1"
           size={"xl"}
@@ -35,13 +37,13 @@ export const ArticleComponent = ({
 
         <Text
           as="article"
-          paddingX="40px"
+          paddingLeft={textPadding}
+          paddingRight={textPadding2}
           lineHeight={"9"}
           fontWeight={"semibold"}
           whiteSpace="pre-line"
-        >
-          {articleText}
-        </Text>
+          dangerouslySetInnerHTML={{ __html: articleText }}
+        ></Text>
       </VStack>
 
       {imageOrientation === "flex-end" && (

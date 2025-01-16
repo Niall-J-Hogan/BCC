@@ -14,9 +14,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { SlSocialInstagram } from "react-icons/sl";
 import { NavBarLogo } from "../NavBarLogo";
 import { handleClick } from "@/utils/handleClickNewWindow";
+import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 export const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef(null);
+  const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
+  const headerWidth = isMobile ? "100vw" : "80vw";
 
   return (
     <Box
@@ -25,26 +28,37 @@ export const NavBar = () => {
       p={4}
       color="white"
       position="fixed"
-      w="100%"
+      w={headerWidth}
       zIndex={1000}
     >
-      <Flex maxW="1200px" mx="auto" alignItems="center" position="relative">
+      <Flex maxW="1200px" mx="auto" position="relative">
         <NavBarLogo />
-        <Spacer />
-        <HStack spacing={6} display={{ base: "none", md: "flex" }}>
+      </Flex>
+
+      <Flex ml="auto" justifyContent={"flex-end"} mr={"10px"}>
+        <HStack spacing={3} display={{ base: "none", md: "flex" }}>
           <Link fontWeight="semibold" href="/app/home">
             Home
           </Link>
+          <Link fontWeight="semibold">|</Link>
 
-          <Link fontWeight="semibold" href="/app/artists">
-            Artists
-          </Link>
           <Link
             fontWeight="semibold"
-            onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
+            // onClick={() => handleClick("https://forms.gle/fi4GdsigSCcKn23S9")}
+            href="/app/artists"
           >
-            Vendors Application
+            Artists
           </Link>
+          <Link fontWeight="semibold">|</Link>
+
+          <Link
+            fontWeight="semibold"
+            // onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
+          >
+            Vendors Application (Coming Soon)
+          </Link>
+          <Link fontWeight="semibold">|</Link>
+
           <Link
             fontWeight="semibold"
             onClick={() =>
@@ -55,17 +69,20 @@ export const NavBar = () => {
           >
             Contact Us
           </Link>
+          <Link fontWeight="semibold">|</Link>
+
           <Link
             fontWeight="semibold"
             color="#D2BB34"
-            onClick={() =>
-              handleClick(
-                "https://www.skiddle.com/whats-on/Sheffield/Kelham-Island-Museum/Seven-Hills-Tattoo-Convention-2024-Sheffield/38180081/"
-              )
-            }
+            // onClick={() =>
+            //   handleClick(
+            //     "https://www.skiddle.com/whats-on/Sheffield/Kelham-Island-Museum/Seven-Hills-Tattoo-Convention-2024-Sheffield/38180081/"
+            //   )
+            // }
           >
-            Buy Tickets
+            Buy Tickets (Coming Soon)
           </Link>
+
           <Link fontWeight="semibold">
             <SlSocialInstagram
               size={32}

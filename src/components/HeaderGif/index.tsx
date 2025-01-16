@@ -1,3 +1,4 @@
+import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
 import { handleClick } from "@/utils/handleClickNewWindow";
 import { Box, Button, Heading, Text, VStack } from "@chakra-ui/react";
@@ -15,6 +16,8 @@ export const HeaderGif = ({
   isButton = false,
 }: IHeaderGif) => {
   const { headerGif } = UseGetSizeForDevices();
+  const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
+  const headerWidth = isMobile ? "100vw" : "80vw";
 
   return (
     <VStack
@@ -23,11 +26,11 @@ export const HeaderGif = ({
       paddingTop={headerGif.gifPadding}
     >
       <Box
-        backgroundImage={`/Video.gif`}
+        backgroundImage={`./Video.gif`}
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
-        width="100vw"
+        width={headerWidth}
         h={headerGif.gifSize}
       >
         <VStack
@@ -78,13 +81,10 @@ export const HeaderGif = ({
               backgroundColor={"#CDAF00"}
               size={"lg"}
               width={headerGif.gifButtonSize}
-              onClick={() =>
-                handleClick(
-                  "https://www.skiddle.com/whats-on/Sheffield/Kelham-Island-Museum/Seven-Hills-Tattoo-Convention-2024-Sheffield/38180081/"
-                )
-              }
+              onClick={() => handleClick("https://forms.gle/fi4GdsigSCcKn23S9")}
+              _hover={{ bg: "#5B19D2" }}
             >
-              Buy Tickets
+              Artist Application
             </Button>
           )}
         </VStack>

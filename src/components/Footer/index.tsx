@@ -1,10 +1,13 @@
+import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
 import { handleClick } from "@/utils/handleClickNewWindow";
 import { HStack, Link, Text, VStack } from "@chakra-ui/react";
 export const Footer = () => {
   const { footer } = UseGetSizeForDevices();
+  const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
+  const headerWidth = isMobile ? "100vw" : "80vw";
   return (
-    <VStack width="full" height="200px" backgroundColor={"#5B19D2"}>
+    <VStack width={headerWidth} height="200px" backgroundColor={"#5B19D2"}>
       <HStack
         width="full"
         height="200px"
