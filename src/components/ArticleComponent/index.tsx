@@ -42,9 +42,8 @@ export const ArticleComponent = ({
           lineHeight={"9"}
           fontWeight={"semibold"}
           whiteSpace="pre-line"
-        >
-          {articleText}
-        </Text>
+          dangerouslySetInnerHTML={{ __html: articleText }}
+        ></Text>
       </VStack>
 
       {imageOrientation === "flex-end" && (

@@ -26,7 +26,7 @@ export const HeaderGif = ({
       paddingTop={headerGif.gifPadding}
     >
       <Box
-        backgroundImage={`https://s7.ezgif.com/tmp/ezgif-7-cf1fda7699.gif`}
+        backgroundImage={`./Video.gif`}
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"

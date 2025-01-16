@@ -8,7 +8,14 @@ import { SponsorLogoContainer } from "@/components/SponsorLogoContainer";
 import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
 import Head from "next/head";
-import { byTattoers, theVendors, theVenue, whenIsIt } from "../data/copy";
+import {
+  byTattoers,
+  theArtists,
+  theVendors,
+  theVenue,
+  theVibes,
+  whenIsIt,
+} from "../data/copy";
 
 export const LandingPage = () => {
   const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
@@ -76,17 +83,13 @@ export const LandingPage = () => {
           <MobileArticleComponent
             title="By Tattooers. For The People Of Sheffield"
             articleText={byTattoers}
-            image={
-              "https://live.staticflickr.com/65535/54264252588_e4883ceef9_c.jpg"
-            }
+            image={"./kelham.jpg"}
           />
         ) : (
           <ArticleComponent
             title="By Tattooers. For The People Of Sheffield"
             articleText={byTattoers}
-            image={
-              "https://live.staticflickr.com/65535/54264252588_e4883ceef9_c.jpg"
-            }
+            image={"./kelham.jpg"}
             textOrientation="flex-end"
           />
         )}
@@ -113,6 +116,25 @@ export const LandingPage = () => {
 
         {isMobile || isIpad || isIpadHorizontal ? (
           <MobileArticleComponent
+            title="The Artists"
+            articleText={theArtists}
+            image={
+              "https://live.staticflickr.com/65535/54264252588_e4883ceef9_c.jpg"
+            }
+          />
+        ) : (
+          <ArticleComponent
+            title="The Artists"
+            articleText={theArtists}
+            image={
+              "https://live.staticflickr.com/65535/54264252588_e4883ceef9_c.jpg"
+            }
+            textOrientation="flex-end"
+          />
+        )}
+
+        {isMobile || isIpad || isIpadHorizontal ? (
+          <MobileArticleComponent
             title="The Venue"
             articleText={theVenue}
             image={
@@ -126,7 +148,8 @@ export const LandingPage = () => {
             image={
               "https://live.staticflickr.com/65535/54264263029_842c2d8dec_c.jpg"
             }
-            textOrientation="flex-end"
+            textOrientation="flex-start"
+            imageOrientation="flex-end"
           />
         )}
 
@@ -145,6 +168,21 @@ export const LandingPage = () => {
             image={
               "https://live.staticflickr.com/65535/54264262494_a1602386fc_c.jpg"
             }
+            textOrientation="flex-end"
+          />
+        )}
+
+        {isMobile || isIpad || isIpadHorizontal ? (
+          <MobileArticleComponent
+            title="The Vibes"
+            articleText={theVibes}
+            image={"./byTattooers.jpeg"}
+          />
+        ) : (
+          <ArticleComponent
+            title="The Vibes"
+            articleText={theVibes}
+            image={"./byTattooers.jpeg"}
             textOrientation="flex-start"
             imageOrientation="flex-end"
           />
