@@ -14,6 +14,7 @@ export const ArtistPage = () => {
   const onClick = (year: string) => {
     setScreenState(year);
   };
+
   return (
     <VStack spacing={0} backgroundColor={"#E4FDE1"}>
       <VStack w="full" h="full">
