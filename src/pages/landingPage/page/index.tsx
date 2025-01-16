@@ -1,4 +1,3 @@
-import { Heading, Link, VStack } from "@chakra-ui/react";
 import { ArticleComponent } from "@/components/ArticleComponent";
 import { Footer } from "@/components/Footer";
 import { HeaderGif } from "@/components/HeaderGif";
@@ -7,6 +6,7 @@ import { NavBar } from "@/components/NavBar";
 import { SponsorLogoContainer } from "@/components/SponsorLogoContainer";
 import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 import { UseGetSizeForDevices } from "@/hooks/useGetSizesForDevice";
+import { VStack } from "@chakra-ui/react";
 import Head from "next/head";
 import {
   byTattoers,
@@ -19,7 +19,6 @@ import {
 
 export const LandingPage = () => {
   const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
-  const { sponsorLogoContainer } = UseGetSizeForDevices();
 
   const headerWidth = isMobile ? "100vw" : "80vw";
 
