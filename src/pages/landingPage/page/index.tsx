@@ -76,19 +76,19 @@ export const LandingPage = () => {
             >
               Artist List Announced!
             </Link>
-          </Heading>
+          </Heading> 
         )} */}
         {isMobile || isIpad || isIpadHorizontal ? (
           <MobileArticleComponent
             title="By Tattooers. For The People Of Sheffield"
             articleText={byTattoers}
-            image={"./kelham.jpg"}
+            image={"/kelham.jpg"}
           />
         ) : (
           <ArticleComponent
             title="By Tattooers. For The People Of Sheffield"
             articleText={byTattoers}
-            image={"./kelham.jpg"}
+            image={"/kelham.jpg"}
             textOrientation="flex-end"
           />
         )}
@@ -175,13 +175,13 @@ export const LandingPage = () => {
           <MobileArticleComponent
             title="The Vibes"
             articleText={theVibes}
-            image={"./byTattooers.jpeg"}
+            image={"/byTattooers.jpeg"}
           />
         ) : (
           <ArticleComponent
             title="The Vibes"
             articleText={theVibes}
-            image={"./byTattooers.jpeg"}
+            image={"/byTattooers.jpeg"}
             textOrientation="flex-start"
             imageOrientation="flex-end"
           />
