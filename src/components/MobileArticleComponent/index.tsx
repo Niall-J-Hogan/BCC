@@ -37,9 +37,8 @@ export const MobileArticleComponent = ({
             whiteSpace="pre-line"
             py="10px"
             textAlign={"center"}
-          >
-            {articleText}
-          </Text>
+            dangerouslySetInnerHTML={{ __html: articleText }}
+          ></Text>
         </VStack>
 
         {orientation === "flex-end" && (

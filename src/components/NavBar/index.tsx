@@ -28,7 +28,7 @@ export const NavBar = () => {
       p={4}
       color="white"
       position="fixed"
-      w={headerWidth}
+      w={isIpad ? "full" : headerWidth}
       zIndex={1000}
     >
       <Flex maxW="1200px" mx="auto" position="relative">
