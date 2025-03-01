@@ -17,7 +17,7 @@ export const HeaderGif = ({
 }: IHeaderGif) => {
   const { headerGif } = UseGetSizeForDevices();
   const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
-  const headerWidth = isMobile ? "100vw" : "80vw";
+  const headerWidth = isMobile || isIpad ? "100vw" : "80vw";
 
   return (
     <VStack
@@ -26,7 +26,7 @@ export const HeaderGif = ({
       paddingTop={headerGif.gifPadding}
     >
       <Box
-        backgroundImage={`./Video.gif`}
+        backgroundImage={`url(/Video.gif)`}
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"

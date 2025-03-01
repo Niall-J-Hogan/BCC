@@ -5,7 +5,7 @@ import { HStack, Link, Text, VStack } from "@chakra-ui/react";
 export const Footer = () => {
   const { footer } = UseGetSizeForDevices();
   const { isIpad, isIpadHorizontal, isMobile } = UseGetIsDevice();
-  const headerWidth = isMobile ? "100vw" : "80vw";
+  const headerWidth = isMobile || isIpad ? "100vw" : "80vw";
   return (
     <VStack width={headerWidth} height="200px" backgroundColor={"#5B19D2"}>
       <HStack

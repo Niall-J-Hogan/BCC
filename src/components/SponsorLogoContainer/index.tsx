@@ -4,7 +4,7 @@ import { SponsorLogoBox } from "../SponsorLogoBox/index";
 import { UseGetIsDevice } from "@/hooks/useGetIsDevice";
 export const SponsorLogoContainer = () => {
   const { sponsorLogoContainer } = UseGetSizeForDevices();
-  const { isMobile } = UseGetIsDevice();
+  const { isMobile, isIpad } = UseGetIsDevice();
   const textSize = isMobile ? "18px" : "28px";
   return (
     <VStack width={"full"} marginBottom={"50px"}>
@@ -20,7 +20,7 @@ export const SponsorLogoContainer = () => {
         Proudly Supported By...
       </Heading>
       <HStack
-        width={sponsorLogoContainer.widthSize}
+        width={isIpad ? "95vw" : sponsorLogoContainer.widthSize}
         height="full"
         display={"flex"}
         justifyContent={"space-between"}
