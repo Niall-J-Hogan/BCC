@@ -81,10 +81,14 @@ export const HeaderGif = ({
               backgroundColor={"#CDAF00"}
               size={"lg"}
               width={headerGif.gifButtonSize}
-              onClick={() => handleClick("https://forms.gle/fi4GdsigSCcKn23S9")}
+              onClick={() =>
+                handleClick(
+                  "https://www.skiddle.com/whats-on/Sheffield/Kelham-Island-Museum/Seven-Hills-Tattoo-Convention-2025/40961180/"
+                )
+              }
               _hover={{ bg: "#5B19D2" }}
             >
-              Artist Application
+              Buy Tickets
             </Button>
           )}
         </VStack>
