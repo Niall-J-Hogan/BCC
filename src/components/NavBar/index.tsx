@@ -53,9 +53,9 @@ export const NavBar = () => {
 
           <Link
             fontWeight="semibold"
-            // onClick={() => handleClick("https://forms.gle/uDghDo37mW7HjBsK8")}
+            onClick={() => handleClick("https://forms.gle/ZcLQUtqpVq2ZwbjS9")}
           >
-            Vendors Application (Coming Soon)
+            Vendors Application
           </Link>
           <Link fontWeight="semibold">|</Link>
 
