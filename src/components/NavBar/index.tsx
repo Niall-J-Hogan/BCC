@@ -53,9 +53,9 @@ export const NavBar = () => {
 
           <Link
             fontWeight="semibold"
-            onClick={() => handleClick("https://forms.gle/ZcLQUtqpVq2ZwbjS9")}
+            onClick={() => handleClick("https://forms.gle/Yg6TAREaMXFtsVe9A")}
           >
-            Vendors Application
+            Artist Application
           </Link>
           <Link fontWeight="semibold">|</Link>
 
@@ -74,11 +74,7 @@ export const NavBar = () => {
           <Link
             fontWeight="semibold"
             color="#D2BB34"
-            onClick={() =>
-              handleClick(
-                "https://www.skiddle.com/whats-on/Sheffield/Kelham-Island-Museum/Seven-Hills-Tattoo-Convention-2025/40961180/"
-              )
-            }
+            onClick={() => handleClick("")}
           >
             Buy Tickets
           </Link>
