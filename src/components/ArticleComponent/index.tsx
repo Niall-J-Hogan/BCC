@@ -18,7 +18,7 @@ export const ArticleComponent = ({
   const textPadding = textOrientation === "flex-end" ? "50px" : "";
   const textPadding2 = textOrientation === "flex-start" ? "50px" : "";
   return (
-    <HStack height="full">
+    <HStack height="full" bg="whiteAlpha.500" p="10px" borderRadius={"10px"}>
       {imageOrientation === "flex-start" && (
         <Image alt="" src={image} max-width={"40%"} width={"40%"} />
       )}
