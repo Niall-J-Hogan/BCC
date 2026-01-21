@@ -37,7 +37,7 @@ export const LandingPage = () => {
 
       <HeaderGif
         title={"Seven Hills Tattoo Convention"}
-        subtitle={"30/08/2025 - 31/08/2025"}
+        subtitle={"29/08/2026 - 30/08/2026"}
         tagline="Kelham Island Museum"
         isButton={true}
       />
