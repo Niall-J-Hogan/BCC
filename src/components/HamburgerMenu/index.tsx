@@ -68,9 +68,9 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
               borderRadius={10}
               w="full"
               textAlign={"center"}
-              onClick={() => handleClick("https://forms.gle/Yg6TAREaMXFtsVe9A")}
+              onClick={() => handleClick("https://forms.gle/eYbX9UjxohtMuRUs8")}
             >
-              Artist Application
+              Vendor Application
             </Link>
             <Link
               color={"white"}
@@ -80,7 +80,7 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
               borderRadius={10}
               onClick={() =>
                 handleClick(
-                  "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry"
+                  "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry",
                 )
               }
               w="full"
@@ -94,15 +94,15 @@ export const HamburgerMenu = ({ isOpen, onClose, btnRef }: IHamburgerMenu) => {
               p="10px"
               border="solid white 2px"
               borderRadius={10}
-              onClick={() =>
-                handleClick(
-                  "https://www.skiddle.com/whats-on/Sheffield/Kelham-Island-Museum/Seven-Hills-Tattoo-Convention-2025/40961180/"
-                )
-              }
+              // onClick={() =>
+              //   handleClick(
+              //     "https://www.skiddle.com/whats-on/Sheffield/Kelham-Island-Museum/Seven-Hills-Tattoo-Convention-2025/40961180/"
+              //   )
+              // }
               w="full"
               textAlign={"center"}
             >
-              Buy Tickets
+              Buy Tickets (coming soon)
             </Link>
           </VStack>
         </DrawerBody>
