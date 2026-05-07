@@ -53,9 +53,9 @@ export const NavBar = () => {
 
           <Link
             fontWeight="semibold"
-            onClick={() => handleClick("https://forms.gle/Yg6TAREaMXFtsVe9A")}
+            onClick={() => handleClick("https://forms.gle/eYbX9UjxohtMuRUs8")}
           >
-            Artist Application
+            Vendor Application
           </Link>
           <Link fontWeight="semibold">|</Link>
 
@@ -63,7 +63,7 @@ export const NavBar = () => {
             fontWeight="semibold"
             onClick={() =>
               handleClick(
-                "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry"
+                "mailto:sevenhillstattooconvention@gmail.com?subject=Website%20enquiry",
               )
             }
           >
@@ -76,7 +76,7 @@ export const NavBar = () => {
             color="#D2BB34"
             onClick={() => handleClick("")}
           >
-            Buy Tickets
+            Buy Tickets (coming soon)
           </Link>
 
           <Link fontWeight="semibold">
@@ -85,7 +85,7 @@ export const NavBar = () => {
               color="white"
               onClick={() =>
                 handleClick(
-                  "https://www.instagram.com/sevenhillstattooconvention"
+                  "https://www.instagram.com/sevenhillstattooconvention",
                 )
               }
             />
